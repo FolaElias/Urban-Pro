@@ -10,7 +10,8 @@
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/portfolio.html\" -UseBasicParsing; \"Server UP - $\\($r.StatusCode\\)\" } catch { \"Server DOWN\" })",
       "PowerShell(Copy-Item -Path \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\" -Destination \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra-react\\\\public\\\\assets\" -Recurse -Force)",
       "Bash(python3 -c \"from PIL import Image; img = Image.open\\('assets/img/custom-logo/UP HOUSING LOGO1.png'\\); print\\(img.size\\)\")",
-      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\\\\img\\\\custom-logo\\\\UP HOUSING LOGO1.png'\\\\''\\); Write-Host $img.Width x $img.Height; $img.Dispose\\(\\)')"
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\\\\img\\\\custom-logo\\\\UP HOUSING LOGO1.png'\\\\''\\); Write-Host $img.Width x $img.Height; $img.Dispose\\(\\)')",
+      "PowerShell(Rename-Item \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" \"index.html\")"
     ]
   }
 }
