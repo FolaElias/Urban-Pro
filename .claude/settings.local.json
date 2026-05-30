@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Command npm\\).Source)",
+      "PowerShell(cd \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\"; $job = Start-Job -ScriptBlock { cd \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\"; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run serve 2>&1 }; Start-Sleep -Seconds 5; Receive-Job $job)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000/assets/img/project/project-img-1.png\" -UseBasicParsing | Select-Object StatusCode, ContentType, @{N='Size';E={$_.RawContentLength}})",
+      "PowerShell(1..9 | ForEach-Object { $r = Invoke-WebRequest -Uri \"http://localhost:3000/assets/img/project/project-img-$_.png\" -UseBasicParsing; \"$_ : $\\($r.RawContentLength\\) bytes\" })",
+      "PowerShell(@\\(\"http://localhost:3000/assets/img/bg-img/page-header-bg.png\", \"http://localhost:3000/assets/img/bg-img/footer-bg.png\", \"http://localhost:3000/assets/img/logo/logo-2.png\"\\) | ForEach-Object { try { $r = Invoke-WebRequest -Uri $_ -UseBasicParsing; \"$_ -> $\\($r.StatusCode\\) \\($\\($r.RawContentLength\\) bytes\\)\" } catch { \"$_ -> FAILED: $\\($_.Exception.Message\\)\" } })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/portfolio.html\" -UseBasicParsing; \"Server UP - $\\($r.StatusCode\\)\" } catch { \"Server DOWN\" })",
+      "PowerShell(Copy-Item -Path \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\" -Destination \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra-react\\\\public\\\\assets\" -Recurse -Force)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('assets/img/custom-logo/UP HOUSING LOGO1.png'\\); print\\(img.size\\)\")",
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\\\\img\\\\custom-logo\\\\UP HOUSING LOGO1.png'\\\\''\\); Write-Host $img.Width x $img.Height; $img.Dispose\\(\\)')"
+    ]
+  }
+}
