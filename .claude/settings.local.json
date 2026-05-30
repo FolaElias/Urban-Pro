@@ -11,7 +11,19 @@
       "PowerShell(Copy-Item -Path \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\" -Destination \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra-react\\\\public\\\\assets\" -Recurse -Force)",
       "Bash(python3 -c \"from PIL import Image; img = Image.open\\('assets/img/custom-logo/UP HOUSING LOGO1.png'\\); print\\(img.size\\)\")",
       "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\assets\\\\img\\\\custom-logo\\\\UP HOUSING LOGO1.png'\\\\''\\); Write-Host $img.Width x $img.Height; $img.Dispose\\(\\)')",
-      "PowerShell(Rename-Item \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" \"index.html\")"
+      "PowerShell(Rename-Item \"C:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" \"index.html\")",
+      "Bash(git show *)",
+      "Bash(sed -i 's|<li><a href=\"service-details\\\\.html\">Services</a></li>|<li class=\"menu-item-has-children\"><a href=\"service-details.html\">Services</a><ul><li><a href=\"service-details.html#property-development\">Property Development</a></li><li><a href=\"service-details.html#civil-engineering\">Civil Engineering Contracting</a></li><li><a href=\"service-details.html#renovation-remodeling\">Renovation and Remodeling</a></li><li><a href=\"service-details.html#joint-venture\">Joint Venture Partnership</a></li><li><a href=\"service-details.html#architectural-design\">Architectural Design</a></li></ul></li>|g' *.html && echo \"done\")",
+      "Bash(perl -0777 -i -pe 's|<li class=\"menu-item-has-children\">\\\\s*<a href=\"service\\\\.html\">Portfolio</a>\\\\s*<ul>\\\\s*<li><a href=\"portfolio\\\\.html\">Portfolio Style 1</a></li>\\\\s*<li><a href=\"portfolio-2\\\\.html\">Portfolio Style 2</a></li>\\\\s*<li><a href=\"portfolio-3\\\\.html\">Portfolio Style 3</a></li>\\\\s*<li><a href=\"portfolio-details\\\\.html\">Portfolio Details</a></li>\\\\s*</ul>\\\\s*</li>|<li><a href=\"portfolio-3.html\">Project</a></li>|g' *.html)",
+      "Bash(sed -i 's|<li><a href=\"portfolio-3\\\\.html\">Portfolio Style 3</a></li>||g' portfolio.html portfolio-details.html portfolio-3.html portfolio-2.html service-details.html index.html error-page.html index-3.html index-2.html)",
+      "Bash(sed -i 's|Architectural Design</a></li></ul></li>|Architectural Design</a></li></ul></li>\\\\n                                        <li><a href=\"portfolio-3.html\">Projects</a></li>|' portfolio.html portfolio-details.html portfolio-3.html portfolio-2.html service-details.html index.html error-page.html index-3.html index-2.html)",
+      "Bash(sed -i 's|<li><a href=\"portfolio-3\\\\.html\">Project</a></li>|<li><a href=\"portfolio-3.html\">Projects</a></li>|g' *.html)",
+      "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\">\\\\s*\\\\n\\\\s*<a href=\"service\\\\.html\">Portfolio</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' error-page.html index-2.html index-3.html index.html portfolio-2.html portfolio-3.html portfolio-details.html portfolio.html service-details.html)",
+      "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"service\\\\.html\">Portfolio</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' portfolio-2.html portfolio-3.html portfolio-details.html portfolio.html)",
+      "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"#\">Pages</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' *.html)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Admin\\Desktop\\antra"
     ]
   }
 }

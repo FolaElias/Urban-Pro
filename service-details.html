@@ -22,6 +22,18 @@
         <link rel="stylesheet" href="assets/css/animation.css">
         <link rel="stylesheet" href="assets/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            .service-section { display: none !important; }
+            .service-section.is-active { display: block !important; }
+            .service-section.is-active.svc-animate {
+                animation: svcSlideIn 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            }
+            @keyframes svcSlideIn {
+                from { opacity: 0; transform: translateX(40px); }
+                to   { opacity: 1; transform: translateX(0); }
+            }
+            .service-category-list ul li { cursor: pointer; }
+        </style>
     </head>
 
     <body>
@@ -72,33 +84,11 @@
                             <div class="header-menu-wrap">
                                 <div class="mobile-menu-items">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="service-details.html">Services</a></li>
-                                        <li class="menu-item-has-children">
-                                            <a href="service.html">Portfolio</a>
-                                            <ul>
-                                                <li><a href="portfolio.html">Portfolio Style 1</a></li>
-                                                <li><a href="portfolio-2.html">Portfolio Style 2</a></li>
-                                                <li><a href="portfolio-3.html">Portfolio Style 3</a></li>
-                                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="team.html">Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="pricing.html">Pricing Plans</a></li>
-                                                <li><a href="gallary-1.html">Gallary Style 1</a></li>
-                                                <li><a href="gallary-2.html">Gallary Style 2</a></li>
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop-details.html">Shop Single</a></li>
-                                                <li><a href="faq.html">Faq</a></li>
-                                                <li><a href="error.html">404 Error</a></li>
-                                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                            </ul>
-                                        </li>
+                                        <li class="menu-item-has-children"><a href="about.html">About Us</a><ul><li><a href="team.html">Team</a></li></ul></li>
+                                        <li class="menu-item-has-children"><a href="service-details.html">Services</a><ul><li><a href="service-details.html#property-development">Property Development</a></li><li><a href="service-details.html#civil-engineering">Civil Engineering Contracting</a></li><li><a href="service-details.html#renovation-remodeling">Renovation and Remodeling</a></li><li><a href="service-details.html#joint-venture">Joint Venture Partnership</a></li><li><a href="service-details.html#architectural-design">Architectural Design</a></li></ul></li>
+                                        <li><a href="portfolio-3.html">Projects</a></li>
+
+
                                         <li class="menu-item-has-children">
                                             <a href="blog-grid.html">Blog</a>
                                             <ul>
@@ -299,14 +289,13 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="service-details-left-content pin-box">
                             <div class="service-category-list">
-                                <h3 class="list-title">Other Services</h3>
+                                <h3 class="list-title">Our Services</h3>
                                 <ul>
-                                    <li class="active"><a href="#">Residential Interior Design</a></li>
-                                    <li><a href="#">Commercial Interior Design</a></li>
-                                    <li><a href="#">Interior Design Consultation</a></li>
-                                    <li><a href="#">Outdoor & Landscape Design</a></li>
-                                    <li><a href="#">Renovation and Remodeling</a></li>
-                                    <li><a href="#">Interior 2D/3D Layouts</a></li>
+                                    <li class="active"><a href="#property-development">Property Development</a></li>
+                                    <li><a href="#civil-engineering">Civil Engineering Contracting</a></li>
+                                    <li><a href="#renovation-remodeling">Renovation and Remodeling</a></li>
+                                    <li><a href="#joint-venture">Joint Venture Partnership</a></li>
+                                    <li><a href="#architectural-design">Architectural Design</a></li>
                                 </ul>
                             </div>
                             <div class="service-details-cta">
@@ -323,124 +312,537 @@
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="service-details-content scroll-content">
-                            <div class="service-details-img">
-                                <img src="assets/img/service/service-details-img-1.png" alt="img">
-                            </div>
-                            <h1 class="details-title">About the service</h1>
-                            <p>Commercial interior design is constantly evolving, with a new trends emerging to meet the changing to needs and preferences of the businesses and their customers. One of the most significant trends in that's recent years is biophilic design, which involves incorporating natural elements like plants, wood, and stone into the design.</p>
-                            <p>A growing demand for adaptable layouts that can accommodate changing needs. This might include modular movable partitions. Sustainability is alsokey trend in commercial interior design</p>
-                            <div class="service-details-items">
-                                <div class="service-details-item">
-                                    <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="service"></div>
-                                    <div class="content">
-                                        <h3 class="title">Space Optimization</h3>
-                                        <p>Through the best smart space optimization interior design.</p>
+
+                            <!-- ===== PROPERTY DEVELOPMENT ===== -->
+                            <div id="property-development" class="service-section mb-60">
+                                <div class="service-details-img">
+                                    <img src="assets/img/service/service-details-img-1.png" alt="Property Development">
+                                </div>
+                                <h1 class="details-title">Property Development</h1>
+                                <p>We specialize in developing residential, commercial, and mixed-use properties that combine functionality, aesthetics, and sustainability. Our projects range from luxury apartments and gated communities to office complexes and retail hubs. Each development is designed to meet the highest standards of quality and innovation.</p>
+                                <p>At UrbanPro Housing, every property development project begins with a deep understanding of the market, the environment, and the end user. We integrate sustainable building practices into every stage — from land acquisition and site planning through to construction and handover.</p>
+                                <div class="service-details-items">
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="Residential Development"></div>
+                                        <div class="content">
+                                            <h3 class="title">Residential Development</h3>
+                                            <p>From luxury apartments to gated estate communities, we create homes that offer comfort, security, and long-term value.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="Commercial Development"></div>
+                                        <div class="content">
+                                            <h3 class="title">Commercial Development</h3>
+                                            <p>We develop modern office complexes and retail hubs engineered for productivity, foot traffic, and business growth.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="Mixed-Use Projects"></div>
+                                        <div class="content">
+                                            <h3 class="title">Mixed-Use Projects</h3>
+                                            <p>Integrating living, working, and leisure spaces in a single development to maximize land value and community impact.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="Sustainable Building"></div>
+                                        <div class="content">
+                                            <h3 class="title">Sustainable Building</h3>
+                                            <p>Incorporating eco-friendly materials, energy-efficient systems, and green certifications into every development we undertake.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="service-details-item">
-                                    <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="service"></div>
-                                    <div class="content">
-                                        <h3 class="title">Flexible Layouts</h3>
-                                        <p>Through the best smart space optimization interior design.</p>
-                                    </div>
+                                <div class="service-details-img-wrap">
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-2.png" alt="img"></div>
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-3.png" alt="img"></div>
                                 </div>
-                                <div class="service-details-item">
-                                    <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="service"></div>
-                                    <div class="content">
-                                        <h3 class="title">Smart Technology</h3>
-                                        <p>Through the best smart space optimization interior design.</p>
-                                    </div>
+                                <h2 class="details-title">Our Development Approach</h2>
+                                <p>Our development process is driven by rigorous feasibility studies, market research, and community engagement. We partner with leading architects and engineers to ensure each project delivers on its promise — structurally sound, aesthetically impressive, and financially rewarding for investors and occupants alike.</p>
+                                <h2 class="details-title">Why Choose UrbanPro for Property Development</h2>
+                                <p>With a proven track record across multiple asset classes, UrbanPro Housing brings the financial strength, technical capability, and market insight needed to deliver world-class developments on time and within budget.</p>
+                                <div class="service-details-list-wrap">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Residential, commercial &amp; mixed-use expertise</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Highest standards of quality and innovation</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Sustainable and eco-friendly design practices</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>On-time project delivery</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Transparent financial management</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>End-to-end project management</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Experienced development team</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Strong investor &amp; community partnerships</li>
+                                    </ul>
                                 </div>
-                                <div class="service-details-item">
-                                    <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="service"></div>
-                                    <div class="content">
-                                        <h3 class="title">Cost Efficiency</h3>
-                                        <p>Through the best smart space optimization interior design.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="service-details-img-wrap">
-                                <div class="details-img">
-                                    <img src="assets/img/service/service-details-img-2.png" alt="img">
-                                </div>
-                                <div class="details-img">
-                                    <img src="assets/img/service/service-details-img-3.png" alt="img">
-                                </div>
-                            </div>
-                            <h2 class="details-title">Types of Commercial Spaces</h2>
-                            <p>In design, we bring characteristics of the natural world into built spaces, such as water, greenery, and natural light, or elements like wood and stone. Encouraging the use of natural systems and processes in design allows for exposure to nature, and in turn, these design approaches improve health and wellbeing. There are a number of possible benefits, including reduced heart rate variability and pulse rates, decreased blood pressure, and increased activity in our nervous systems, to name a few.</p>
-                            <h2 class="details-title">Key Elements of Interior Design</h2>
-                            <p>Several key elements are essential to successful commercial interior design. These include space planning, lighting design, material selection, furniture and fixtures, color and texture, technology integration, and acoustics.</p>
-                            <div class="service-details-list-wrap">
-                                <ul>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>We provide high quality design services.</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Project on time and Latest Design.</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Scientific Skills For getting a better result.</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Renovations Benefit of Service</li>
-                                </ul>
-                                <ul>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Flexible with any structure of the building</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Commitment to customer service</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Experienced, time-served engineers</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>We are confident about our projects.</li>
-                                </ul>
-                            </div>
-                            <p class="mb-50">Commercial interior design is a dynamic and multifaceted field that plays a critical role in the success of businesses across a wide range of industries. By blending creativity with practicality, commercial interior design</p>
-                            <div class="service-faq">
-                                <h3 class="faq-title">Frequently asked questions</h3>
-                                <div class="faq-accordion fade-wrapper">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item fade-top">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    What interior design services do you offer?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                <div class="service-faq mt-40">
+                                    <h3 class="faq-title">Frequently Asked Questions</h3>
+                                    <div class="faq-accordion fade-wrapper">
+                                        <div class="accordion" id="accordionPD">
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="pdHeadingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pdCollapseOne" aria-expanded="true" aria-controls="pdCollapseOne">
+                                                        What types of properties does UrbanPro develop?
+                                                    </button>
+                                                </h2>
+                                                <div id="pdCollapseOne" class="accordion-collapse collapse show" aria-labelledby="pdHeadingOne" data-bs-parent="#accordionPD">
+                                                    <div class="accordion-body">
+                                                        We develop a diverse range of properties including luxury apartments, gated residential communities, commercial office complexes, retail hubs, and mixed-use developments that combine residential and commercial spaces.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="accordion-item fade-top">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    What services do you offer?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="pdHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdCollapseTwo" aria-expanded="false" aria-controls="pdCollapseTwo">
+                                                        How does UrbanPro ensure quality in its developments?
+                                                    </button>
+                                                </h2>
+                                                <div id="pdCollapseTwo" class="accordion-collapse collapse" aria-labelledby="pdHeadingTwo" data-bs-parent="#accordionPD">
+                                                    <div class="accordion-body">
+                                                        Each project undergoes rigorous quality checks at every stage — from material sourcing and structural engineering to finishing and handover. We work with certified contractors and comply with all relevant building codes and standards.
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="accordion-item fade-top">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    What is your design process?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item fade-top">
-                                            <h2 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                    Can I create custom design?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="pdHeadingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pdCollapseThree" aria-expanded="false" aria-controls="pdCollapseThree">
+                                                        Can individuals invest in UrbanPro development projects?
+                                                    </button>
+                                                </h2>
+                                                <div id="pdCollapseThree" class="accordion-collapse collapse" aria-labelledby="pdHeadingThree" data-bs-parent="#accordionPD">
+                                                    <div class="accordion-body">
+                                                        Yes. We offer investment opportunities in our development projects to qualified individuals and institutional investors. Contact our team to learn about available projects and investment structures.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- ===== END PROPERTY DEVELOPMENT ===== -->
+
+                            <!-- ===== CIVIL ENGINEERING CONTRACTING ===== -->
+                            <div id="civil-engineering" class="service-section mb-60">
+                                <div class="service-details-img">
+                                    <img src="assets/img/service/service-img-2.png" alt="Civil Engineering Contracting">
+                                </div>
+                                <h1 class="details-title">Civil Engineering Contracting</h1>
+                                <p>Our team of skilled civil engineers and contractors provides end-to-end construction and infrastructure development services. From site preparation and road construction to drainage systems and utility installations, we ensure that every project is executed with precision and efficiency.</p>
+                                <p>UrbanPro Housing's civil engineering division brings deep technical expertise to every engagement. We manage complex construction challenges — from geotechnical assessments and earthworks to structural builds and infrastructure commissioning — delivering projects that stand the test of time.</p>
+                                <div class="service-details-items">
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="Site Preparation"></div>
+                                        <div class="content">
+                                            <h3 class="title">Site Preparation</h3>
+                                            <p>Comprehensive land clearing, levelling, and geotechnical assessments to establish a safe and stable foundation for every project.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="Road Construction"></div>
+                                        <div class="content">
+                                            <h3 class="title">Road Construction</h3>
+                                            <p>Design and construction of access roads, internal estate roads, and public highway projects built to engineering specifications.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="Drainage Systems"></div>
+                                        <div class="content">
+                                            <h3 class="title">Drainage Systems</h3>
+                                            <p>Installation of stormwater drainage, sewage networks, and flood management infrastructure to protect properties and communities.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="Utility Installations"></div>
+                                        <div class="content">
+                                            <h3 class="title">Utility Installations</h3>
+                                            <p>Coordination and installation of water supply, electrical networks, telecommunications, and gas infrastructure for new developments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-details-img-wrap">
+                                    <div class="details-img"><img src="assets/img/service/service-img-3.png" alt="img"></div>
+                                    <div class="details-img"><img src="assets/img/service/service-img-4.png" alt="img"></div>
+                                </div>
+                                <h2 class="details-title">Our Engineering Expertise</h2>
+                                <p>Our civil engineering team leverages modern surveying equipment, BIM software, and construction management systems to deliver infrastructure projects that are precise, compliant, and cost-effective. We coordinate seamlessly with local authorities, utility companies, and project stakeholders to minimise delays.</p>
+                                <h2 class="details-title">Project Execution Standards</h2>
+                                <p>Every civil engineering contract is governed by a strict quality management plan. Our site supervisors conduct daily inspections, and third-party testing labs verify material specifications at every critical stage of construction.</p>
+                                <div class="service-details-list-wrap">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>End-to-end construction management</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Certified civil engineers on every project</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Road, drainage &amp; utility expertise</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Compliance with national building codes</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Precision execution on every contract</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Third-party quality verification</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Strict health &amp; safety protocols</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>On-budget and on-schedule delivery</li>
+                                    </ul>
+                                </div>
+                                <div class="service-faq mt-40">
+                                    <h3 class="faq-title">Frequently Asked Questions</h3>
+                                    <div class="faq-accordion fade-wrapper">
+                                        <div class="accordion" id="accordionCE">
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="ceHeadingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ceCollapseOne" aria-expanded="true" aria-controls="ceCollapseOne">
+                                                        What civil engineering services does UrbanPro offer?
+                                                    </button>
+                                                </h2>
+                                                <div id="ceCollapseOne" class="accordion-collapse collapse show" aria-labelledby="ceHeadingOne" data-bs-parent="#accordionCE">
+                                                    <div class="accordion-body">
+                                                        We provide a full range of civil engineering and infrastructure services including site preparation, road construction, drainage and sewage systems, utility installations, and structural builds for residential and commercial developments.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="ceHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ceCollapseTwo" aria-expanded="false" aria-controls="ceCollapseTwo">
+                                                        Do you handle both public and private infrastructure projects?
+                                                    </button>
+                                                </h2>
+                                                <div id="ceCollapseTwo" class="accordion-collapse collapse" aria-labelledby="ceHeadingTwo" data-bs-parent="#accordionCE">
+                                                    <div class="accordion-body">
+                                                        Yes. UrbanPro Housing works on both privately commissioned developments and public infrastructure projects. We have experience navigating regulatory requirements and working with government agencies on larger-scale infrastructure contracts.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="ceHeadingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ceCollapseThree" aria-expanded="false" aria-controls="ceCollapseThree">
+                                                        How do you ensure safety on construction sites?
+                                                    </button>
+                                                </h2>
+                                                <div id="ceCollapseThree" class="accordion-collapse collapse" aria-labelledby="ceHeadingThree" data-bs-parent="#accordionCE">
+                                                    <div class="accordion-body">
+                                                        All our construction sites operate under a comprehensive Health, Safety, and Environment (HSE) management plan. Mandatory safety inductions, daily toolbox talks, PPE compliance, and regular third-party audits are standard on every UrbanPro site.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ===== END CIVIL ENGINEERING ===== -->
+
+                            <!-- ===== RENOVATION AND REMODELING ===== -->
+                            <div id="renovation-remodeling" class="service-section mb-60">
+                                <div class="service-details-img">
+                                    <img src="assets/img/service/service-img-5.png" alt="Renovation and Remodeling">
+                                </div>
+                                <h1 class="details-title">Renovation and Remodeling</h1>
+                                <p>We transform existing structures into modern, high-performance spaces tailored to your lifestyle or business needs. Our renovation and remodeling services breathe new life into aging properties — improving functionality, enhancing aesthetics, and significantly increasing market value.</p>
+                                <p>Whether you are upgrading a private residence, refurbishing a commercial office, or undertaking a full structural overhaul, UrbanPro Housing's renovation team delivers results that exceed expectations while minimising disruption to your daily operations.</p>
+                                <div class="service-details-items">
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="Interior Renovation"></div>
+                                        <div class="content">
+                                            <h3 class="title">Interior Renovation</h3>
+                                            <p>Complete interior makeovers covering flooring, ceilings, partitioning, finishes, and fixtures to modernise your living or working space.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="Structural Remodeling"></div>
+                                        <div class="content">
+                                            <h3 class="title">Structural Remodeling</h3>
+                                            <p>Safe and engineered structural alterations including load-bearing wall modifications, room additions, and floor plan reconfigurations.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="Commercial Fit-Out"></div>
+                                        <div class="content">
+                                            <h3 class="title">Commercial Fit-Out</h3>
+                                            <p>Turnkey office, retail, and hospitality fit-outs designed to align with your brand identity and operational workflow.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="Property Restoration"></div>
+                                        <div class="content">
+                                            <h3 class="title">Property Restoration</h3>
+                                            <p>Careful restoration of heritage and aged properties, preserving their character while upgrading essential systems and finishes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-details-img-wrap">
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-2.png" alt="img"></div>
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-3.png" alt="img"></div>
+                                </div>
+                                <h2 class="details-title">Our Renovation Process</h2>
+                                <p>Every renovation begins with a detailed site assessment and client consultation. Our team prepares a scope of works, material schedule, and project timeline before a single tool is lifted. We coordinate all trades — carpentry, plumbing, electrical, plastering, painting — under a single contract for a seamless and stress-free experience.</p>
+                                <h2 class="details-title">Why Renovate with UrbanPro?</h2>
+                                <p>Renovation is one of the most cost-effective ways to increase the value and liveability of a property. UrbanPro Housing brings construction expertise, project management discipline, and design sensitivity to every renovation — ensuring the finished result is both beautiful and built to last.</p>
+                                <div class="service-details-list-wrap">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Residential &amp; commercial renovation expertise</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Quality materials sourced from vetted suppliers</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Single-contract trade coordination</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Minimal disruption to occupants</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Transparent budgeting with no hidden costs</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>On-schedule project completion</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Experienced craftsmen and site managers</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Post-completion defect warranty period</li>
+                                    </ul>
+                                </div>
+                                <div class="service-faq mt-40">
+                                    <h3 class="faq-title">Frequently Asked Questions</h3>
+                                    <div class="faq-accordion fade-wrapper">
+                                        <div class="accordion" id="accordionRR">
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="rrHeadingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rrCollapseOne" aria-expanded="true" aria-controls="rrCollapseOne">
+                                                        How long does a typical renovation project take?
+                                                    </button>
+                                                </h2>
+                                                <div id="rrCollapseOne" class="accordion-collapse collapse show" aria-labelledby="rrHeadingOne" data-bs-parent="#accordionRR">
+                                                    <div class="accordion-body">
+                                                        Project timelines vary depending on scope and complexity. A standard interior renovation for a single residential unit may take 4–8 weeks, while larger commercial fit-outs or structural remodels can span 3–6 months. We provide a detailed schedule at the outset of every project.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="rrHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rrCollapseTwo" aria-expanded="false" aria-controls="rrCollapseTwo">
+                                                        Can I stay in the property during renovation?
+                                                    </button>
+                                                </h2>
+                                                <div id="rrCollapseTwo" class="accordion-collapse collapse" aria-labelledby="rrHeadingTwo" data-bs-parent="#accordionRR">
+                                                    <div class="accordion-body">
+                                                        In many cases, yes. For phased renovations or works confined to specific areas, occupants can often remain on site. Our team will advise on the safest and most practical approach during the initial consultation to cause as little disruption as possible.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="rrHeadingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rrCollapseThree" aria-expanded="false" aria-controls="rrCollapseThree">
+                                                        Do you offer a warranty on renovation work?
+                                                    </button>
+                                                </h2>
+                                                <div id="rrCollapseThree" class="accordion-collapse collapse" aria-labelledby="rrHeadingThree" data-bs-parent="#accordionRR">
+                                                    <div class="accordion-body">
+                                                        Yes. All UrbanPro renovation projects come with a post-completion defect liability period. Any workmanship defects identified within the agreed warranty window will be rectified at no additional cost to the client.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ===== END RENOVATION AND REMODELING ===== -->
+
+                            <!-- ===== JOINT VENTURE PARTNERSHIP ===== -->
+                            <div id="joint-venture" class="service-section mb-60">
+                                <div class="service-details-img">
+                                    <img src="assets/img/service/service-details-img-1.png" alt="Joint Venture Partnership">
+                                </div>
+                                <h1 class="details-title">Joint Venture Partnership</h1>
+                                <p>UrbanPro Housing Investment Limited collaborates with landowners, investors, and developers to create mutually beneficial partnerships. Through joint ventures, we combine resources and expertise to deliver high-impact real estate projects that generate value for all stakeholders.</p>
+                                <p>We believe the most successful real estate projects are built on trust, shared vision, and complementary strengths. Our joint venture model is structured to be transparent, equitable, and aligned with the goals of every partner — from the initial agreement through to project completion and profit distribution.</p>
+                                <div class="service-details-items">
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="Land Acquisition Partnerships"></div>
+                                        <div class="content">
+                                            <h3 class="title">Land Acquisition Partnerships</h3>
+                                            <p>We partner with landowners who contribute land while UrbanPro provides the capital, design, construction, and marketing expertise to develop and sell the completed project.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="Investment Collaboration"></div>
+                                        <div class="content">
+                                            <h3 class="title">Investment Collaboration</h3>
+                                            <p>Financial investors co-invest alongside UrbanPro in specific projects, sharing returns proportional to their stake while benefiting from our full development management capability.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="Developer Partnerships"></div>
+                                        <div class="content">
+                                            <h3 class="title">Developer Partnerships</h3>
+                                            <p>Collaborations with other developers and contractors to pool technical resources, labour capacity, and market access for large-scale or complex projects.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="Profit Sharing Models"></div>
+                                        <div class="content">
+                                            <h3 class="title">Profit Sharing Models</h3>
+                                            <p>Clear and agreed-upon profit-sharing structures negotiated upfront, ensuring all parties understand their returns before any commitment is made.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-details-img-wrap">
+                                    <div class="details-img"><img src="assets/img/service/service-img-2.png" alt="img"></div>
+                                    <div class="details-img"><img src="assets/img/service/service-img-3.png" alt="img"></div>
+                                </div>
+                                <h2 class="details-title">How We Structure Partnerships</h2>
+                                <p>Joint ventures with UrbanPro are governed by legally sound partnership agreements that clearly define roles, responsibilities, financial contributions, and exit mechanisms. Our legal and finance teams work closely with partners to structure arrangements that protect all parties and maximise project outcomes.</p>
+                                <h2 class="details-title">Benefits of Partnering with UrbanPro</h2>
+                                <p>Partners gain access to UrbanPro Housing's development expertise, established contractor networks, market intelligence, and financing relationships. Whether you bring land, capital, or technical capability to the table, we provide a partnership framework that amplifies your contribution and delivers results.</p>
+                                <div class="service-details-list-wrap">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Transparent and legally structured agreements</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Flexible partnership models for any contributor</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Shared risk and combined expertise</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>High-impact project delivery</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Maximised returns for all stakeholders</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Access to UrbanPro's contractor network</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Clear profit distribution framework</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Dedicated partnership management team</li>
+                                    </ul>
+                                </div>
+                                <div class="service-faq mt-40">
+                                    <h3 class="faq-title">Frequently Asked Questions</h3>
+                                    <div class="faq-accordion fade-wrapper">
+                                        <div class="accordion" id="accordionJV">
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="jvHeadingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jvCollapseOne" aria-expanded="true" aria-controls="jvCollapseOne">
+                                                        What can I bring to a joint venture with UrbanPro?
+                                                    </button>
+                                                </h2>
+                                                <div id="jvCollapseOne" class="accordion-collapse collapse show" aria-labelledby="jvHeadingOne" data-bs-parent="#accordionJV">
+                                                    <div class="accordion-body">
+                                                        Partners can contribute land, capital, technical expertise, or market access. UrbanPro Housing then provides the complementary elements — development management, construction, design, marketing, and sales — to bring the project to completion.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="jvHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jvCollapseTwo" aria-expanded="false" aria-controls="jvCollapseTwo">
+                                                        How are profits shared in a joint venture?
+                                                    </button>
+                                                </h2>
+                                                <div id="jvCollapseTwo" class="accordion-collapse collapse" aria-labelledby="jvHeadingTwo" data-bs-parent="#accordionJV">
+                                                    <div class="accordion-body">
+                                                        Profit-sharing ratios are agreed upon during negotiation and documented in the joint venture agreement. The split reflects each party's contribution — whether land, capital, or operational capacity — and is reviewed and agreed before any project commences.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="jvHeadingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jvCollapseThree" aria-expanded="false" aria-controls="jvCollapseThree">
+                                                        Is the joint venture legally binding?
+                                                    </button>
+                                                </h2>
+                                                <div id="jvCollapseThree" class="accordion-collapse collapse" aria-labelledby="jvHeadingThree" data-bs-parent="#accordionJV">
+                                                    <div class="accordion-body">
+                                                        Yes. All joint ventures are formalised through comprehensive legal agreements drafted by qualified legal professionals. These agreements protect the interests of all parties and provide clear mechanisms for dispute resolution and project exit.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ===== END JOINT VENTURE PARTNERSHIP ===== -->
+
+                            <!-- ===== ARCHITECTURAL DESIGN ===== -->
+                            <div id="architectural-design" class="service-section">
+                                <div class="service-details-img">
+                                    <img src="assets/img/service/service-img-4.png" alt="Architectural Design">
+                                </div>
+                                <h1 class="details-title">Architectural Design</h1>
+                                <p>Our architectural design services blend creativity with engineering precision to deliver spaces that are visually striking, functionally superior, and built for longevity. From initial concept sketches to detailed construction drawings, our architects guide every project with meticulous attention to detail and a deep commitment to client vision.</p>
+                                <p>UrbanPro Housing's design philosophy is rooted in the belief that great architecture serves people. Every structure we design is responsive to its context — climate, culture, community — while meeting the highest standards of spatial efficiency, structural integrity, and aesthetic excellence.</p>
+                                <div class="service-details-items">
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-1.png" alt="Concept Design"></div>
+                                        <div class="content">
+                                            <h3 class="title">Concept Design</h3>
+                                            <p>Translating client briefs and site conditions into compelling design concepts that establish the vision, form, and character of the project from day one.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-2.png" alt="Structural Planning"></div>
+                                        <div class="content">
+                                            <h3 class="title">Structural Planning</h3>
+                                            <p>Detailed architectural and structural drawings that define every element of the building — from foundations to roof — ready for regulatory approval and construction.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-3.png" alt="Interior Architecture"></div>
+                                        <div class="content">
+                                            <h3 class="title">Interior Architecture</h3>
+                                            <p>Thoughtful interior spatial design covering floor plans, material palettes, lighting strategies, and built-in fixtures that elevate the user experience.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-details-item">
+                                        <div class="icon"><img src="assets/img/icon/service-details-4.png" alt="Landscape Design"></div>
+                                        <div class="content">
+                                            <h3 class="title">Landscape Design</h3>
+                                            <p>Integrated landscape and external environment design — driveways, planting, lighting, and outdoor amenities — that complement and enhance the built form.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-details-img-wrap">
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-2.png" alt="img"></div>
+                                    <div class="details-img"><img src="assets/img/service/service-details-img-3.png" alt="img"></div>
+                                </div>
+                                <h2 class="details-title">Our Design Philosophy</h2>
+                                <p>We approach every design challenge with curiosity and rigour. Our architects draw on local context, environmental conditions, and the latest advances in building technology to produce designs that are not only beautiful but also practical and sustainable. We use 3D modelling and BIM tools to bring designs to life before construction begins, helping clients visualise and refine their spaces with confidence.</p>
+                                <h2 class="details-title">From Vision to Reality</h2>
+                                <p>Good design is only valuable when it can be built. UrbanPro's architectural team works hand-in-hand with our civil engineering and construction divisions to ensure every design is constructable, compliant, and delivered as intended — bridging the gap between drawing board and completed building.</p>
+                                <div class="service-details-list-wrap">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Client-centred design process</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Innovative and context-responsive concepts</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Full regulatory submission drawings</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>3D visualisation and BIM modelling</li>
+                                    </ul>
+                                    <ul>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Interior architecture &amp; landscape design</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Integrated with construction team</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Compliance with all building codes</li>
+                                        <li><i class="fa-sharp fa-solid fa-circle-check"></i>Sustainable design principles</li>
+                                    </ul>
+                                </div>
+                                <div class="service-faq mt-40">
+                                    <h3 class="faq-title">Frequently Asked Questions</h3>
+                                    <div class="faq-accordion fade-wrapper">
+                                        <div class="accordion" id="accordionAD">
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="adHeadingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#adCollapseOne" aria-expanded="true" aria-controls="adCollapseOne">
+                                                        What is your architectural design process?
+                                                    </button>
+                                                </h2>
+                                                <div id="adCollapseOne" class="accordion-collapse collapse show" aria-labelledby="adHeadingOne" data-bs-parent="#accordionAD">
+                                                    <div class="accordion-body">
+                                                        Our design process begins with a brief and site assessment, followed by concept design, design development, detailed drawings, and regulatory submission. At each stage, we present our work and incorporate client feedback before progressing, ensuring the final design truly reflects your vision.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="adHeadingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adCollapseTwo" aria-expanded="false" aria-controls="adCollapseTwo">
+                                                        Can UrbanPro design and build my project?
+                                                    </button>
+                                                </h2>
+                                                <div id="adCollapseTwo" class="accordion-collapse collapse" aria-labelledby="adHeadingTwo" data-bs-parent="#accordionAD">
+                                                    <div class="accordion-body">
+                                                        Yes. UrbanPro Housing offers a fully integrated design-and-build service. Our architectural team works directly with our construction and civil engineering divisions, providing a seamless journey from concept design through to project handover under a single responsible party.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item fade-top">
+                                                <h2 class="accordion-header" id="adHeadingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adCollapseThree" aria-expanded="false" aria-controls="adCollapseThree">
+                                                        Do you offer 3D visualisations before construction?
+                                                    </button>
+                                                </h2>
+                                                <div id="adCollapseThree" class="accordion-collapse collapse" aria-labelledby="adHeadingThree" data-bs-parent="#accordionAD">
+                                                    <div class="accordion-body">
+                                                        Absolutely. We produce detailed 3D renderings and walkthroughs of all architectural projects so clients can fully visualise their space before construction begins. This reduces costly design changes mid-build and ensures complete alignment between client expectations and the final outcome.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ===== END ARCHITECTURAL DESIGN ===== -->
+
                         </div>
                     </div>
                 </div>
@@ -544,5 +946,73 @@
         <script src="assets/js/slider.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            (function () {
+                var VALID_IDS = ['property-development','civil-engineering','renovation-remodeling','joint-venture','architectural-design'];
+
+                function idFromHref(href) {
+                    var m = (href || '').match(/#(.+)$/);
+                    return m ? m[1] : '';
+                }
+
+                function showService(id) {
+                    if (!id || VALID_IDS.indexOf(id) === -1) id = 'property-development';
+
+                    // Hide all (CSS !important already sets display:none via class absence)
+                    VALID_IDS.forEach(function (sid) {
+                        var el = document.getElementById(sid);
+                        if (el) el.classList.remove('is-active', 'svc-animate');
+                    });
+
+                    var target = document.getElementById(id);
+                    if (!target) return;
+
+                    // Show target
+                    target.classList.add('is-active');
+
+                    // Clear GSAP inline opacity/transform on fade-top children so they appear
+                    if (window.gsap) {
+                        target.querySelectorAll('.fade-top').forEach(function (el) {
+                            gsap.killTweensOf(el);
+                            gsap.set(el, { clearProps: 'opacity,y,transform,visibility' });
+                        });
+                    }
+
+                    // Trigger slide-in animation
+                    void target.offsetWidth;
+                    target.classList.add('svc-animate');
+
+                    // Update sidebar highlight
+                    document.querySelectorAll('.service-category-list ul li').forEach(function (li) {
+                        var a = li.querySelector('a');
+                        li.classList.toggle('active', a ? idFromHref(a.getAttribute('href')) === id : false);
+                    });
+
+                    // Recalculate ScrollTrigger after section becomes visible
+                    if (window.ScrollTrigger) setTimeout(function () { ScrollTrigger.refresh(); }, 60);
+                }
+
+                // Delegated click — works even if jQuery re-inits the DOM
+                document.addEventListener('click', function (e) {
+                    var li = e.target.closest('.service-category-list ul li');
+                    if (!li) return;
+                    e.preventDefault();
+                    var a = li.querySelector('a');
+                    showService(idFromHref(a ? a.getAttribute('href') : ''));
+                });
+
+                // Activate correct section on load
+                function initFromHash() {
+                    showService(idFromHref(window.location.hash) || 'property-development');
+                }
+
+                // Run at DOM ready for same-page use, and after load so GSAP has settled
+                document.addEventListener('DOMContentLoaded', initFromHash);
+                window.addEventListener('load', function () {
+                    initFromHash();
+                    setTimeout(initFromHash, 900); // after GSAP + preloader finish
+                });
+            })();
+        </script>
     </body>
 </html>
