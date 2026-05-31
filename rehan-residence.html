@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Rehan Residence - Studio, 1 & 2 Bed Apartments starting from 65M by UrbanPro Housing.">
+        <title>UrbanPro Housing</title>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/custom-logo/URBANPRO icon logo.png">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/venobox.min.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/carouselTicker.css">
+        <link rel="stylesheet" href="assets/css/animation.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            .invest-stat-box {
+                background: #1C1C1D;
+                border: 1px solid rgba(211,155,50,0.25);
+                border-radius: 4px;
+                padding: 40px 30px;
+                text-align: center;
+                height: 100%;
+            }
+            .invest-stat-box .stat-icon { color: var(--tl-color-theme-primary); font-size: 32px; margin-bottom: 14px; }
+            .invest-stat-box .stat-value { font-size: 36px; font-weight: 700; color: var(--tl-color-theme-primary); line-height: 1; margin-bottom: 8px; }
+            .invest-stat-box .stat-label { color: #9F9FA4; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+            .payment-band {
+                background: var(--tl-color-theme-primary);
+                padding: 60px 0;
+            }
+            .payment-band h2 { color: #fff; font-weight: 800; font-size: 38px; }
+            .payment-band p { color: rgba(255,255,255,0.85); font-size: 18px; }
+
+            .unit-card {
+                background: #1C1C1D;
+                border-top: 3px solid var(--tl-color-theme-primary);
+                padding: 40px 35px;
+                height: 100%;
+            }
+            .unit-card .unit-type { color: var(--tl-color-theme-primary); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+            .unit-card .unit-name { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 20px; }
+
+            .why-card {
+                padding: 35px 30px;
+                border: 1px solid #E3E3E8;
+                height: 100%;
+                transition: border-color .3s, box-shadow .3s;
+            }
+            .why-card:hover { border-color: var(--tl-color-theme-primary); box-shadow: 0 8px 30px rgba(211,155,50,.1); }
+            .why-card .why-icon { font-size: 36px; color: var(--tl-color-theme-primary); margin-bottom: 18px; }
+            .why-card h4 { font-weight: 700; margin-bottom: 12px; }
+            .why-card p { color: #4D4D52; line-height: 1.8; margin: 0; }
+
+            .invest-cta { background: #1C1C1D; padding: 80px 0; }
+            .invest-cta h2 { color: #fff; font-weight: 700; }
+            .invest-cta p { color: #9F9FA4; }
+            .invest-cta .contact-item { color: #ccc; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+            .invest-cta .contact-item i { color: var(--tl-color-theme-primary); font-size: 16px; }
+
+            .gallery-grid img { width: 100%; object-fit: cover; }
+
+            /* ── Hover & transition enhancements ── */
+            .invest-stat-box { transition: transform .35s ease, border-color .35s, box-shadow .35s; cursor: default; }
+            .invest-stat-box:hover { transform: translateY(-10px); border-color: var(--tl-color-theme-primary); box-shadow: 0 24px 50px rgba(211,155,50,.18); }
+            .invest-stat-box .stat-icon i { transition: transform .35s ease; display: inline-block; }
+            .invest-stat-box:hover .stat-icon i { transform: scale(1.25) rotate(-10deg); }
+
+            .unit-card { transition: transform .35s ease, box-shadow .35s; }
+            .unit-card:hover { transform: translateY(-10px); box-shadow: 0 28px 60px rgba(0,0,0,.4); }
+
+            .why-card { transition: transform .35s ease, border-color .35s, box-shadow .35s; }
+            .why-card:hover { transform: translateY(-10px); border-color: var(--tl-color-theme-primary); box-shadow: 0 20px 40px rgba(211,155,50,.12); }
+            .why-card .why-icon i { transition: transform .3s; display: inline-block; }
+            .why-card:hover .why-icon i { transform: scale(1.2) rotate(-8deg); }
+
+            /* Gallery zoom */
+            .gallery-grid a { display: block; overflow: hidden; }
+            .gallery-grid a img { transition: transform .65s cubic-bezier(.25,.46,.45,.94); }
+            .gallery-grid a:hover img { transform: scale(1.08); }
+
+            /* Page header entrance */
+            .page-header .title { animation: invHeaderReveal .9s cubic-bezier(.25,.46,.45,.94) both; animation-delay: .3s; }
+            .page-header .sub-title { animation: invHeaderReveal .9s cubic-bezier(.25,.46,.45,.94) both; animation-delay: .52s; }
+            @keyframes invHeaderReveal { from { opacity:0; transform:translateY(35px); } to { opacity:1; transform:translateY(0); } }
+
+            /* Floating price badge */
+            .price-badge { animation: floatBadge 3.2s ease-in-out infinite; }
+            @keyframes floatBadge { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+
+            /* Gold shimmer on stat hover */
+            .invest-stat-box:hover .stat-value {
+                background: linear-gradient(90deg, #b8821e, #f0c060, #D39B32, #f0c060, #b8821e);
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                animation: goldShimmer 1.8s ease infinite;
+            }
+            @keyframes goldShimmer { 0%{ background-position:200% center;} 100%{ background-position:-200% center;} }
+
+            /* Payment band pulse border */
+            .payment-band { position: relative; }
+            .payment-band::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border: 2px solid rgba(255,255,255,.12);
+                pointer-events: none;
+                animation: bandPulse 3s ease-in-out infinite;
+            }
+            @keyframes bandPulse { 0%,100%{ opacity:.12;} 50%{ opacity:.35;} }
+
+            section { overflow: hidden; }
+        </style>
+    </head>
+    <body>
+
+        <!-- preloader -->
+        <div class="preloader overflow-hidden">
+            <div class="site-name"><span>URBAN</span></div>
+            <div class="preloader-gutters">
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+            </div>
+        </div>
+
+        <!-- header -->
+        <header class="header sticky-active">
+            <div class="primary-header">
+                <div class="container">
+                    <div class="primary-header-inner">
+                        <div class="header-left-wrap">
+                            <div class="header-logo d-lg-block">
+                                <a href="index.html">
+                                    <img src="assets/img/custom-logo/UP HOUSING LOGO1.png" alt="logo" style="max-width:170px;height:auto;">
+                                </a>
+                            </div>
+                            <div class="header-menu-wrap">
+                                <div class="mobile-menu-items">
+                                    <ul>
+                                        <li class="menu-item-has-children"><a href="about.html">About Us</a><ul><li><a href="team.html">Team</a></li></ul></li>
+                                        <li class="menu-item-has-children"><a href="service-details.html">Services</a><ul><li><a href="service-details.html#property-development">Property Development</a></li><li><a href="service-details.html#civil-engineering">Civil Eng. Contracting</a></li><li><a href="service-details.html#renovation-remodeling">Renovation &amp; Remodeling</a></li><li><a href="service-details.html#joint-venture">Joint Venture Partnership</a></li><li><a href="service-details.html#architectural-design">Architectural Design</a></li></ul></li>
+                                        <li><a href="portfolio-3.html">Projects</a></li>
+                                        <li class="menu-item-has-children active"><a href="#">Investments</a><ul><li class="active"><a href="rehan-residence.html">Rehan Residence</a></li><li><a href="valmont-crest.html">Valmont Crest</a></li></ul></li>
+                                        <li><a href="blog-standard.html">News &amp; Blog</a></li>
+                                        <li class="menu-item-has-children"><a href="contact.html">Contact Us</a><ul><li><a href="faq.html">FAQs</a></li></ul></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right-wrap">
+                            <a href="tel:+2347014702451" class="header-contact">
+                                <span class="icon"><i class="fa-regular fa-phone"></i></span>
+                                <span class="content">
+                                    <span class="call-text">Call Us Now</span>
+                                    <span class="call-number">07014702451</span>
+                                </span>
+                            </a>
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="tl-primary-btn header-btn">Get in Touch</a>
+                            </div>
+                            <div class="search-icon dl-search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 2C11 0.89543 11.8954 0 13 0H14C15.1046 0 16 0.895431 16 2V3C16 4.10457 15.1046 5 14 5H13C11.8954 5 11 4.10457 11 3V2Z" fill="white"/>
+                                        <path d="M0 2C0 0.89543 0.895431 0 2 0H3C4.10457 0 5 0.895431 5 2V3C5 4.10457 4.10457 5 3 5H2C0.89543 5 0 4.10457 0 3V2Z" fill="white"/>
+                                        <path d="M0 13C0 11.8954 0.895431 11 2 11H3C4.10457 11 5 11.8954 5 13V14C5 15.1046 4.10457 16 3 16H2C0.89543 16 0 15.1046 0 14V13Z" fill="white"/>
+                                        <path d="M11 13C11 11.8954 11.8954 11 13 11H14C15.1046 11 16 11.8954 16 13V14C16 15.1046 15.1046 16 14 16H13C11.8954 16 11 15.1046 11 14V13Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="popup-search-box">
+            <div class="box-inner-wrap d-flex align-items-center">
+                <form id="form" action="#" method="get" role="search">
+                    <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+                </form>
+                <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+            </div>
+        </div>
+
+        <div id="sidebar-area" class="sidebar-area">
+            <button class="sidebar-trigger close">
+                <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7" style="enable-background:new 0 0 16 12.7" xml:space="preserve">
+                    <g>
+                        <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16" height="2"></rect>
+                        <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16" height="2"></rect>
+                    </g>
+                </svg>
+            </button>
+            <div class="side-menu-content">
+                <div class="side-menu-logo">
+                    <a class="dark-img" href="index.html"><img src="assets/img/custom-logo/UP HOUSING LOGO1.png" alt="logo" style="max-width:170px;height:auto;"></a>
+                    <a class="light-img" href="index.html"><img src="assets/img/custom-logo/UP HOUSING LOGO3.png" alt="logo" style="max-width:170px;height:auto;"></a>
+                </div>
+                <div class="side-menu-wrap"></div>
+                <div class="side-menu-about">
+                    <h4 class="title">Premium Real Estate Developments by UrbanPro Housing</h4>
+                </div>
+                <div class="side-menu-gallary">
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-1.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-1.png" alt="img"></a></div>
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-2.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-2.png" alt="img"></a></div>
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-3.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-3.png" alt="img"></a></div>
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-4.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-4.png" alt="img"></a></div>
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-5.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-5.png" alt="img"></a></div>
+                    <div class="side-menu-gallary-item"><a href="assets/img/project/sidebar-gallary-6.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/sidebar-gallary-6.png" alt="img"></a></div>
+                </div>
+                <div class="side-menu-contact">
+                    <ul class="side-menu-list">
+                        <li>Lagos, Nigeria</li>
+                        <li><a href="tel:+2347014702451">07014702451</a></li>
+                        <li><a class="mail" href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a></li>
+                    </ul>
+                </div>
+                <ul class="side-menu-social">
+                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="instagram"><a href="https://instagram.com/urbanpro_housing" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile-side-menu">
+            <div class="side-menu-content">
+                <div class="side-menu-head">
+                    <a href="index.html"><img src="assets/img/custom-logo/UP HOUSING LOGO1.png" alt="logo" style="max-width:170px;height:auto;"></a>
+                    <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+                </div>
+                <div class="side-menu-wrap"></div>
+                <div class="side-menu-contact">
+                    <div class="side-menu-header"><h3>Contact Us</h3></div>
+                    <ul class="side-menu-list">
+                        <li><i class="fas fa-map-marker-alt"></i><p>Lagos, Nigeria</p></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+2347014702451">07014702451</a></li>
+                        <li><i class="fas fa-envelope-open-text"></i><a href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a></li>
+                    </ul>
+                </div>
+                <ul class="side-menu-social">
+                    <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-side-menu-overlay"></div>
+
+    <div id="antra-smooth-wrapper">
+        <div id="antra-smooth-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="bg-img" data-background="assets/img/bg-img/page-header-bg.png"></div>
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="title">Rehan Residence</h1>
+                    <h4 class="sub-title">
+                        <a class="home" href="index.html">Home </a>
+                        <span class="icon">-</span>
+                        <a href="#">Investments</a>
+                        <span class="icon">-</span>
+                        <a class="inner-page" href="rehan-residence.html"> Rehan Residence</a>
+                    </h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Intro -->
+        <section class="pt-130 pb-80">
+            <div class="container container-2">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="section-heading mb-30">
+                            <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;">Upcoming Project</h4>
+                            <h2 class="title" style="font-size:42px;font-weight:800;line-height:1.2;">Rehan<br><span style="color:var(--tl-color-theme-primary);">Residence</span></h2>
+                            <p style="color:var(--tl-color-theme-primary);font-weight:600;font-size:16px;margin:8px 0 20px;">Studio, 1 &amp; 2 Bed Apartment</p>
+                            <div style="width:60px;height:3px;background:var(--tl-color-theme-primary);margin-bottom:24px;"></div>
+                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;" class="mb-20">
+                                Rehan Residence is a modern residential development offering carefully designed studio, one-bedroom, and two-bedroom apartments. Purpose-built for professionals, young families, and investors seeking high-quality, competitively priced urban living.
+                            </p>
+                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;">
+                                With a flexible payment structure that allows buyers to spread the balance over up to 9 months, Rehan Residence makes premium homeownership achievable without compromise.
+                            </p>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap mt-30">
+                            <a href="contact.html" class="tl-primary-btn">Register Interest</a>
+                            <a href="tel:+2347014702451" class="tl-primary-btn" style="background:transparent;border:2px solid var(--tl-color-theme-primary);color:var(--tl-color-theme-primary);">07014702451</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div style="position:relative;">
+                            <img src="assets/img/project/project-2.png" alt="Rehan Residence" style="width:100%;height:500px;object-fit:cover;">
+                            <div class="price-badge" style="position:absolute;top:0;right:0;background:#1C1C1D;padding:20px 24px;text-align:center;">
+                                <span style="color:#9F9FA4;font-size:12px;letter-spacing:2px;display:block;margin-bottom:6px;">STARTING FROM</span>
+                                <span style="color:var(--tl-color-theme-primary);font-size:32px;font-weight:800;">₦65M</span>
+                            </div>
+                            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.75);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+                                <div style="text-align:center;">
+                                    <span style="color:#9F9FA4;font-size:11px;letter-spacing:2px;display:block;">INITIAL DEPOSIT</span>
+                                    <span style="color:var(--tl-color-theme-primary);font-size:26px;font-weight:800;">₦30M</span>
+                                </div>
+                                <div style="width:1px;height:40px;background:rgba(255,255,255,.2);"></div>
+                                <div style="text-align:center;">
+                                    <span style="color:#9F9FA4;font-size:11px;letter-spacing:2px;display:block;">SPREAD BALANCE</span>
+                                    <span style="color:#fff;font-size:16px;font-weight:700;">Up to 9 Months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Stats -->
+        <section class="pb-80">
+            <div class="container container-2">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="invest-stat-box">
+                            <div class="stat-icon"><i class="fa-solid fa-tag"></i></div>
+                            <div class="stat-value">₦65M</div>
+                            <div class="stat-label">Starting Price</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="invest-stat-box">
+                            <div class="stat-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <div class="stat-value">₦30M</div>
+                            <div class="stat-label">Initial Deposit</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="invest-stat-box">
+                            <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                            <div class="stat-value">9</div>
+                            <div class="stat-label">Months Payment Plan</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="invest-stat-box">
+                            <div class="stat-icon"><i class="fa-solid fa-building"></i></div>
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Unit Types Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Highlight Band -->
+        <section class="payment-band">
+            <div class="container container-2">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <h2 class="mb-15">Flexible Payment — <br>Spread Your Balance Over 9 Months</h2>
+                        <p class="mb-0">Pay your initial deposit of ₦30M and spread the remaining balance over up to 9 months. A straightforward path to owning a premium apartment in Lagos with no hidden fees.</p>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <a href="contact.html" style="background:#111;color:#fff;padding:16px 40px;font-weight:700;font-size:16px;display:inline-block;border-radius:2px;">Get Payment Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit Types — pricing layout -->
+        <section class="pricing-section pt-100 pb-100">
+            <div class="container container-2">
+                <div class="row section-heading-wrap ml-0 mw-100">
+                    <div class="shape"><img src="assets/img/shapes/section-heading.png" alt="shape"></div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="section-heading mb-0">
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">unit types</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12">
+                        <div class="section-heading section-heading-2 mb-0 pl-0">
+                            <h2 class="section-title title-2">Find Your <span>Perfect <br>Space</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-img-item">
+                            <div class="bg-img"><img src="assets/img/project/project-2.png" alt="Rehan Residence"></div>
+                            <h3 class="title">Your home, <span>your story, let's</span> build it together.</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-item">
+                            <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
+                            <h3 class="title">Studio Apartment</h3>
+                            <p>A beautifully designed open-plan studio ideal for young professionals seeking a modern, low-maintenance city home.</p>
+                            <h4 class="price">From ₦65M <span>/per unit</span></h4>
+                            <ul class="pricing-list">
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Open-plan living area</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Modern kitchenette</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>En-suite bathroom</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Premium finishes throughout</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="tl-primary-btn">Enquire Now <span class="icon"><i class="fa-regular fa-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-item">
+                            <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
+                            <h3 class="title">1 Bed Apartment</h3>
+                            <p>Spacious and thoughtfully designed with a separate living and sleeping area for comfortable urban living.</p>
+                            <h4 class="price">From ₦65M <span>/per unit</span></h4>
+                            <ul class="pricing-list">
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Separate bedroom</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Dedicated living room</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Fully fitted kitchen</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>En-suite bathroom</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="tl-primary-btn">Enquire Now <span class="icon"><i class="fa-regular fa-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pricing-item">
+                            <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
+                            <h3 class="title">2 Bed Apartment</h3>
+                            <p>The flagship unit — ideal for small families or professionals wanting extra space, comfort and premium finishes.</p>
+                            <h4 class="price">Most Popular <span>unit type</span></h4>
+                            <ul class="pricing-list">
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Two en-suite bedrooms</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Open living &amp; dining area</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Premium kitchen &amp; finishes</li>
+                                <li><i class="fa-sharp fa-solid fa-circle-check"></i>Spread balance up to 9 months</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="contact.html" class="tl-primary-btn">Enquire Now <span class="icon"><i class="fa-regular fa-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Invest -->
+        <section style="background:#f9f9f9;padding:80px 0;">
+            <div class="container container-2">
+                <div class="section-heading text-center mb-50">
+                    <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px;">Why Choose Us</h4>
+                    <h2 class="title">Why Invest in Rehan Residence</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4>Trusted Developer</h4>
+                            <p>UrbanPro Housing has a proven track record of delivering quality developments on time and to specification.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h4>Strong ROI</h4>
+                            <p>Lagos real estate consistently delivers strong capital appreciation and rental yields for investors.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                            <h4>Flexible Payment</h4>
+                            <p>Spread your balance over 9 months with an initial deposit of just ₦30M — no need to pay all at once.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+                            <h4>Premium Finishes</h4>
+                            <p>Every unit is delivered with high-quality finishes and fittings that reflect UrbanPro's commitment to excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="pt-100 pb-100">
+            <div class="container container-2">
+                <div class="section-heading text-center mb-50">
+                    <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px;">Project Visuals</h4>
+                    <h2 class="title">Gallery</h2>
+                </div>
+                <div class="row g-3 gallery-grid">
+                    <div class="col-lg-8">
+                        <a href="assets/img/project/project-2.png" class="venobox" data-gall="rehan">
+                            <img src="assets/img/project/project-2.png" alt="Rehan Residence" style="height:400px;">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <a href="assets/img/project/project-1.png" class="venobox" data-gall="rehan">
+                                    <img src="assets/img/project/project-1.png" alt="Rehan Residence" style="height:192px;">
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="assets/img/project/project-4.png" class="venobox" data-gall="rehan">
+                                    <img src="assets/img/project/project-4.png" alt="Rehan Residence" style="height:192px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="assets/img/project/sidebar-gallary-2.png" class="venobox" data-gall="rehan">
+                            <img src="assets/img/project/sidebar-gallary-2.png" alt="Rehan Residence" style="height:260px;">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="assets/img/project/sidebar-gallary-3.png" class="venobox" data-gall="rehan">
+                            <img src="assets/img/project/sidebar-gallary-3.png" alt="Rehan Residence" style="height:260px;">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="assets/img/project/sidebar-gallary-4.png" class="venobox" data-gall="rehan">
+                            <img src="assets/img/project/sidebar-gallary-4.png" alt="Rehan Residence" style="height:260px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="invest-cta">
+            <div class="container container-2">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <h2 class="mb-15">Ready to Secure Your<br>Rehan Residence Unit?</h2>
+                        <p class="mb-30">Contact our team today to learn more about available units, floor plans, and how to get started with just a ₦30M initial deposit.</p>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i> hello@urbanprohousing.com</div>
+                        <div class="contact-item"><i class="fa-solid fa-globe"></i> www.urbanprohousing.com</div>
+                        <div class="contact-item"><i class="fab fa-instagram"></i> @urbanpro_housing</div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i> 07014702451 &nbsp;|&nbsp; 09077604585</div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <a href="contact.html" class="tl-primary-btn" style="padding:18px 44px;font-size:16px;">Register Interest</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section overflow-hidden">
+            <div class="footer-bg" data-background="assets/img/bg-img/footer-bg.png"></div>
+            <div class="footer-shade"></div>
+            <div class="container container-2">
+                <div class="row footer-wrap">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="widget-header">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/custom-logo/UP HOUSING LOGO1.png" alt="logo" style="max-width:170px;height:auto;"></a>
+                                </div>
+                            </div>
+                            <p class="mb-10">Premium real estate developments <br> built for exceptional living.</p>
+                            <p class="mb-0">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget footer-col-2">
+                            <ul class="footer-list">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service-details.html">Services</a></li>
+                                <li><a href="portfolio-3.html">Projects</a></li>
+                                <li><a href="team.html">Our Team</a></li>
+                                <li><a href="blog-grid.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget footer-col-2 pl-0">
+                            <ul class="footer-list">
+                                <li><a href="rehan-residence.html">Rehan Residence</a></li>
+                                <li><a href="valmont-crest.html">Valmont Crest</a></li>
+                                <li><a href="contact.html">Partners</a></li>
+                                <li><a href="contact.html">Affiliate Program</a></li>
+                                <li><a href="contact.html">Terms &amp; Conditions</a></li>
+                                <li><a href="contact.html">Support Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-address">
+                                <a class="number" href="tel:+2347014702451">07014702451</a>
+                                <a class="mail" href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a>
+                                <ul class="social-list">
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="https://instagram.com/urbanpro_housing" target="_blank">Instagram</a></li>
+                                    <li><a href="#">YouTube</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-content">
+                        <p>© 2025 urbanpro. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text"><span>urbanpro</span></div>
+        </footer>
+
+        </div>
+    </div>
+
+        <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+        <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+        <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+        <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+        <script src="assets/js/vendor/venobox.min.js"></script>
+        <script src="assets/js/vendor/odometer.min.js"></script>
+        <script src="assets/js/vendor/meanmenu.js"></script>
+        <script src="assets/js/vendor/jquery.isotope.js"></script>
+        <script src="assets/js/vendor/swiper.min.js"></script>
+        <script src="assets/js/vendor/split-type.min.js"></script>
+        <script src="assets/js/vendor/gsap.min.js"></script>
+        <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+        <script src="assets/js/vendor/scroll-smoother.js"></script>
+        <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+        <script src="assets/js/vendor/nice-select.js"></script>
+        <script src="assets/js/vendor/three.min.js"></script>
+        <script src="assets/js/vendor/panolens.min.js"></script>
+        <script src="assets/js/vendor/jquery.event.move.min.js"></script>
+        <script src="assets/js/vendor/jquery.twentytwenty.min.js"></script>
+        <script src="assets/js/slider.js"></script>
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+        (function () {
+            var ease = 'power3.out';
+            var vh = window.innerHeight;
+
+            /* Animate a group — immediately if already visible, via ScrollTrigger if below fold */
+            function anim(els, fromProps, stagger, triggerEl) {
+                if (!els || !els.length) return;
+                var arr = Array.isArray(els) ? els : Array.from(els);
+                if (!arr.length) return;
+                var trigger = triggerEl || arr[0];
+                var rect = trigger.getBoundingClientRect();
+                var cfg = Object.assign({ duration: 0.75, ease: ease, stagger: stagger || 0 }, fromProps);
+                if (rect.top < vh) {
+                    gsap.from(arr, cfg);
+                } else {
+                    cfg.scrollTrigger = { trigger: trigger, start: 'top 88%', toggleActions: 'play none none none' };
+                    gsap.from(arr, cfg);
+                }
+            }
+
+            function initAnimations() {
+                if (!window.gsap || !window.ScrollTrigger) return;
+                vh = window.innerHeight;
+
+                /* Intro section: heading + text — always visible on load */
+                anim(document.querySelectorAll('.section-heading h4.sub-heading'), { y: 30, opacity: 0 });
+                anim(document.querySelectorAll('.section-heading h2.title'),       { y: 40, opacity: 0, delay: 0.1 });
+                anim(document.querySelectorAll('.section-heading p'),               { y: 30, opacity: 0 }, 0.1);
+                anim(document.querySelectorAll('.section-heading .d-flex'),         { y: 20, opacity: 0, delay: 0.35 });
+
+                /* Hero image parallax */
+                var heroImg = document.querySelector('.col-lg-6 > div > img');
+                if (heroImg) gsap.to(heroImg, { scrollTrigger: { trigger: heroImg, scrub: 1.5, start: 'top bottom', end: 'bottom top' }, y: -50, ease: 'none' });
+
+                /* Stat boxes */
+                var statBoxes = gsap.utils.toArray('.invest-stat-box');
+                if (statBoxes.length) anim(statBoxes, { y: 60, opacity: 0 }, 0.14, statBoxes[0].closest('.row'));
+
+                /* Animated counters */
+                document.querySelectorAll('.stat-value').forEach(function (el) {
+                    var m = el.textContent.trim().match(/(.*?)([\d.]+)(.*)/);
+                    if (!m) return;
+                    var pre = m[1], num = parseFloat(m[2]), suf = m[3];
+                    ScrollTrigger.create({ trigger: el, start: 'top 88%', once: true,
+                        onEnter: function () {
+                            gsap.fromTo({ v: 0 }, { v: num }, { duration: 1.8, ease: 'power2.out',
+                                onUpdate: function () { el.textContent = pre + Math.round(this.targets()[0].v) + suf; }
+                            });
+                        }
+                    });
+                });
+
+                /* Unit cards */
+                var cards = gsap.utils.toArray('.unit-card');
+                if (cards.length) anim(cards, { y: 70, opacity: 0 }, 0.18, cards[0].closest('.row'));
+
+                /* Why cards */
+                var why = gsap.utils.toArray('.why-card');
+                if (why.length) anim(why, { y: 55, opacity: 0 }, 0.14, why[0].closest('.row'));
+
+                /* Gallery */
+                gsap.utils.toArray('.gallery-grid a').forEach(function (a, i) {
+                    anim([a], { scale: 0.88, opacity: 0, delay: i * 0.1 }, 0, a.closest('section'));
+                });
+
+                /* Payment band */
+                var band = document.querySelector('.payment-band');
+                if (band) anim(Array.from(band.querySelectorAll('h2, p, a')), { x: -50, opacity: 0 }, 0.15, band);
+
+                /* CTA */
+                var ctaDivs = document.querySelectorAll('.invest-cta .row > div');
+                if (ctaDivs.length) anim(Array.from(ctaDivs), { y: 40, opacity: 0 }, 0.2, ctaDivs[0].closest('section'));
+
+                ScrollTrigger.refresh();
+            }
+
+            window.addEventListener('load', function () { setTimeout(initAnimations, 400); });
+        })();
+        </script>
+    </body>
+</html>

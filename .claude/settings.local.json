@@ -20,10 +20,19 @@
       "Bash(sed -i 's|<li><a href=\"portfolio-3\\\\.html\">Project</a></li>|<li><a href=\"portfolio-3.html\">Projects</a></li>|g' *.html)",
       "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\">\\\\s*\\\\n\\\\s*<a href=\"service\\\\.html\">Portfolio</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' error-page.html index-2.html index-3.html index.html portfolio-2.html portfolio-3.html portfolio-details.html portfolio.html service-details.html)",
       "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"service\\\\.html\">Portfolio</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' portfolio-2.html portfolio-3.html portfolio-details.html portfolio.html)",
-      "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"#\">Pages</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' *.html)"
+      "Bash(perl -i -0pe 's|[ \\\\t]*<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"#\">Pages</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>||gs' *.html)",
+      "Bash(perl -i -0pe 's|<li class=\"menu-item-has-children\\(?: active\\)?\">\\\\s*\\\\n\\\\s*<a href=\"blog-grid\\\\.html\">Blog</a>\\\\s*\\\\n\\\\s*<ul>.*?</ul>\\\\s*\\\\n\\\\s*</li>|<li><a href=\"blog-standard.html\">News and Blog</a></li>|gs' *.html)",
+      "Bash(sed -i 's|Civil Engineering Contracting|Civil Eng. Contracting|g' *.html)",
+      "Bash(sed -i 's|Renovation and Remodeling|Renovation \\\\&amp; Remodeling|g' *.html)",
+      "Bash(npx sass *)",
+      "Bash(cat >> *)",
+      "Bash(sed -i 's|News and Blog|News \\\\&amp; Blog|g' *.html && echo \"done\" && grep -c 'News &amp; Blog' index.html about.html)",
+      "Bash(cd /c/Users/Admin/Desktop/antra *)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\Admin\\Desktop\\antra"
+      "c:\\Users\\Admin\\Desktop\\antra",
+      "C:\\Users\\Admin\\Desktop\\antra\\assets\\css",
+      "C:\\Users\\Admin\\Desktop\\antra"
     ]
   }
 }
