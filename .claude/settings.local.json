@@ -27,7 +27,9 @@
       "Bash(npx sass *)",
       "Bash(cat >> *)",
       "Bash(sed -i 's|News and Blog|News \\\\&amp; Blog|g' *.html && echo \"done\" && grep -c 'News &amp; Blog' index.html about.html)",
-      "Bash(cd /c/Users/Admin/Desktop/antra *)"
+      "Bash(cd /c/Users/Admin/Desktop/antra *)",
+      "Bash(python3 -)",
+      "Bash(sed -i 's|<span>URBAN</span>|<span>URBANPRO</span>|g' /c/Users/Admin/Desktop/antra/*.html && echo \"done\" && grep -c 'URBANPRO' /c/Users/Admin/Desktop/antra/index.html)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Admin\\Desktop\\antra",
