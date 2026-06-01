@@ -106,6 +106,16 @@
 
             /* Smooth section clip */
             section { overflow: hidden; }
+
+            /* Concave top-left image shape (matches counter-img-2.png) */
+            .project-img-shape {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                -webkit-mask-size: 100% 100%;
+                -webkit-mask-repeat: no-repeat;
+                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
         </style>
     </head>
     <body>
@@ -272,30 +282,20 @@
         </section>
 
         <!-- Project Intro -->
-        <section class="pt-130 pb-80">
+        <section class="counter-section pt-130 pb-130 bg-white fade-wrapper">
             <div class="container container-2">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
-                        <div class="section-heading mb-30">
-                            <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;">Upcoming Project</h4>
-                            <h2 class="title" style="font-size:42px;font-weight:800;line-height:1.2;">Valmont Crest<br><span style="color:var(--tl-color-theme-primary);">Residence</span></h2>
-                            <div style="width:60px;height:3px;background:var(--tl-color-theme-primary);margin:20px 0;"></div>
-                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;" class="mb-20">
-                                Located on the prestigious Ogunlana Drive in Surulere, Lagos, Valmont Crest Residence is a landmark luxury development offering an elevated lifestyle in one of the city's most sought-after addresses.
-                            </p>
-                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;">
-                                Featuring expansive luxury layouts with panoramic views, premium finishes, and world-class amenities, Valmont Crest sets a new benchmark for upscale living in Lagos. Available in 3-bedroom apartment and 4-bedroom penthouse configurations, each unit is designed to deliver unmatched comfort and sophistication.
-                            </p>
-                        </div>
-                        <div class="d-flex gap-3 flex-wrap mt-30">
-                            <a href="contact.html" class="tl-primary-btn">Register Interest</a>
-                            <a href="tel:+2347014702451" class="tl-primary-btn" style="background:transparent;border:2px solid var(--tl-color-theme-primary);color:var(--tl-color-theme-primary);">07014702451</a>
-                        </div>
+                <div class="heading-space">
+                    <div class="section-heading mb-0 slide-anim" data-delay="0.3" data-offset="100" data-direction="left" style="flex:0 0 44%;max-width:44%;">
+                        <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Upcoming Project</h4>
+                        <h2 class="section-title cursor-effect title-2">Valmont Crest <span>Residence</span></h2>
+                        <div style="width:60px;height:3px;background:var(--tl-color-theme-primary);margin:20px 0;"></div>
+                        <p class="mb-20">Located on the prestigious Ogunlana Drive in Surulere, Lagos, Valmont Crest Residence is a landmark luxury development offering an elevated lifestyle in one of the city's most sought-after addresses.</p>
+                        <p>Featuring expansive luxury layouts with panoramic views, premium finishes, and world-class amenities, Valmont Crest sets a new benchmark for upscale living in Lagos. Available in 3-bedroom apartment and 4-bedroom penthouse configurations, each unit is designed to deliver unmatched comfort and sophistication.</p>
                     </div>
-                    <div class="col-lg-6">
-                        <div style="position:relative;">
-                            <img src="assets/img/project/project-1.png" alt="Valmont Crest Residence" style="width:100%;height:480px;object-fit:cover;">
-                            <div class="deposit-badge" style="position:absolute;bottom:24px;left:24px;background:var(--tl-color-theme-primary);color:#fff;padding:16px 24px;font-weight:700;font-size:18px;">
+                    <div class="counter-top-img slide-anim" data-delay="0.3" data-offset="100" data-direction="right" style="flex:0 0 52%;max-width:52%;">
+                        <div class="project-img-shape" style="position:relative;">
+                            <img src="assets/img/project/project-1.png" alt="Valmont Crest Residence" style="width:100%;height:480px;object-fit:cover;display:block;">
+                            <div style="position:absolute;bottom:24px;left:24px;background:var(--tl-color-theme-primary);color:#fff;padding:16px 24px;font-weight:700;font-size:18px;">
                                 <span style="font-size:13px;display:block;letter-spacing:2px;opacity:.85;margin-bottom:4px;">INITIAL DEPOSIT</span>
                                 ₦50M
                             </div>
@@ -415,7 +415,7 @@
         </section>
 
         <!-- Gallery -->
-        <section class="pt-100 pb-100">
+        <!-- <section class="pt-100 pb-100">
             <div class="container container-2">
                 <div class="section-heading text-center mb-50">
                     <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px;">Project Visuals</h4>
@@ -448,7 +448,43 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+          <div class="gallary-section overflow-hidden">
+            <div class="gallary-text"><span>gallery</span></div>
+            <div class="gallary-wrap wrap-1">
+                <div class="gallery-scroll-wrap">
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-6.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-6.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-7.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-7.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-8.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-8.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-9.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-9.png" alt="img"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallary-wrap gallery-scroll-direction-ltr">
+                <div class="gallery-scroll-wrap align-items-start">
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-10.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-10.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-11.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-11.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-12.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-12.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-13.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-13.png" alt="img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA -->
         <section class="invest-cta">

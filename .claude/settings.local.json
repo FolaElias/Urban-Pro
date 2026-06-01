@@ -29,7 +29,12 @@
       "Bash(sed -i 's|News and Blog|News \\\\&amp; Blog|g' *.html && echo \"done\" && grep -c 'News &amp; Blog' index.html about.html)",
       "Bash(cd /c/Users/Admin/Desktop/antra *)",
       "Bash(python3 -)",
-      "Bash(sed -i 's|<span>URBAN</span>|<span>URBANPRO</span>|g' /c/Users/Admin/Desktop/antra/*.html && echo \"done\" && grep -c 'URBANPRO' /c/Users/Admin/Desktop/antra/index.html)"
+      "Bash(sed -i 's|<span>URBAN</span>|<span>URBANPRO</span>|g' /c/Users/Admin/Desktop/antra/*.html && echo \"done\" && grep -c 'URBANPRO' /c/Users/Admin/Desktop/antra/index.html)",
+      "PowerShell(git -C \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" diff --stat HEAD)",
+      "PowerShell(git -C \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" diff HEAD -- about.html)",
+      "PowerShell(head -100)",
+      "PowerShell(git -C \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" diff HEAD -- rehan-residence.html)",
+      "PowerShell(Select-String -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" -Pattern \"<section|sub-heading|section-title|col-lg\" | Select-Object -First 80 | ForEach-Object { \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })"
     ],
     "additionalDirectories": [
       "c:\\Users\\Admin\\Desktop\\antra",

@@ -116,6 +116,16 @@
             @keyframes bandPulse { 0%,100%{ opacity:.12;} 50%{ opacity:.35;} }
 
             section { overflow: hidden; }
+
+            /* Concave top-left image shape (matches counter-img-2.png) */
+            .project-img-shape {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                -webkit-mask-size: 100% 100%;
+                -webkit-mask-repeat: no-repeat;
+                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
         </style>
     </head>
     <body>
@@ -282,31 +292,21 @@
         </section>
 
         <!-- Project Intro -->
-        <section class="pt-130 pb-80">
+        <section class="counter-section pt-130 pb-130 bg-white fade-wrapper">
             <div class="container container-2">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
-                        <div class="section-heading mb-30">
-                            <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;">Upcoming Project</h4>
-                            <h2 class="title" style="font-size:42px;font-weight:800;line-height:1.2;">Rehan<br><span style="color:var(--tl-color-theme-primary);">Residence</span></h2>
-                            <p style="color:var(--tl-color-theme-primary);font-weight:600;font-size:16px;margin:8px 0 20px;">Studio, 1 &amp; 2 Bed Apartment</p>
-                            <div style="width:60px;height:3px;background:var(--tl-color-theme-primary);margin-bottom:24px;"></div>
-                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;" class="mb-20">
-                                Rehan Residence is a modern residential development offering carefully designed studio, one-bedroom, and two-bedroom apartments. Purpose-built for professionals, young families, and investors seeking high-quality, competitively priced urban living.
-                            </p>
-                            <p style="color:#4D4D52;font-size:16px;line-height:1.8;">
-                                With a flexible payment structure that allows buyers to spread the balance over up to 9 months, Rehan Residence makes premium homeownership achievable without compromise.
-                            </p>
-                        </div>
-                        <div class="d-flex gap-3 flex-wrap mt-30">
-                            <a href="contact.html" class="tl-primary-btn">Register Interest</a>
-                            <a href="tel:+2347014702451" class="tl-primary-btn" style="background:transparent;border:2px solid var(--tl-color-theme-primary);color:var(--tl-color-theme-primary);">07014702451</a>
-                        </div>
+                <div class="heading-space">
+                    <div class="section-heading mb-0 slide-anim" data-delay="0.3" data-offset="100" data-direction="left" style="flex:0 0 44%;max-width:44%;">
+                        <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Upcoming Project</h4>
+                        <h2 class="section-title cursor-effect title-2">Rehan <span>Residence</span></h2>
+                        <p style="color:var(--tl-color-theme-primary);font-weight:600;font-size:16px;margin:8px 0 20px;">Studio, 1 &amp; 2 Bed Apartment</p>
+                        <div style="width:60px;height:3px;background:var(--tl-color-theme-primary);margin-bottom:24px;"></div>
+                        <p class="mb-20">Rehan Residence is a modern residential development offering carefully designed studio, one-bedroom, and two-bedroom apartments. Purpose-built for professionals, young families, and investors seeking high-quality, competitively priced urban living.</p>
+                        <p>With a flexible payment structure that allows buyers to spread the balance over up to 9 months, Rehan Residence makes premium homeownership achievable without compromise.</p>
                     </div>
-                    <div class="col-lg-6">
-                        <div style="position:relative;">
-                            <img src="assets/img/project/project-2.png" alt="Rehan Residence" style="width:100%;height:500px;object-fit:cover;">
-                            <div class="price-badge" style="position:absolute;top:0;right:0;background:#1C1C1D;padding:20px 24px;text-align:center;">
+                    <div class="counter-top-img slide-anim" data-delay="0.3" data-offset="100" data-direction="right" style="flex:0 0 52%;max-width:52%;">
+                        <div class="project-img-shape" style="position:relative;">
+                            <img src="assets/img/project/project-2.png" alt="Rehan Residence" style="width:100%;height:500px;object-fit:cover;display:block;">
+                            <div style="position:absolute;top:0;right:0;background:#1C1C1D;padding:20px 24px;text-align:center;">
                                 <span style="color:#9F9FA4;font-size:12px;letter-spacing:2px;display:block;margin-bottom:6px;">STARTING FROM</span>
                                 <span style="color:var(--tl-color-theme-primary);font-size:32px;font-weight:800;">₦65M</span>
                             </div>
@@ -364,7 +364,7 @@
         </section>
 
         <!-- Payment Highlight Band -->
-        <section class="payment-band">
+        <!-- <section class="payment-band">
             <div class="container container-2">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-7">
@@ -376,7 +376,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Unit Types — pricing layout -->
         <section class="pricing-section pt-100 pb-100">
@@ -395,13 +395,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="pricing-img-item">
-                            <div class="bg-img"><img src="assets/img/project/project-2.png" alt="Rehan Residence"></div>
-                            <h3 class="title">Your home, <span>your story, let's</span> build it together.</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="pricing-item">
                             <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
                             <h3 class="title">Studio Apartment</h3>
@@ -418,7 +412,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="pricing-item">
                             <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
                             <h3 class="title">1 Bed Apartment</h3>
@@ -435,7 +429,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="pricing-item">
                             <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
                             <h3 class="title">2 Bed Apartment</h3>
@@ -497,7 +491,7 @@
         </section>
 
         <!-- Gallery -->
-        <section class="pt-100 pb-100">
+        <!-- <section class="pt-100 pb-100">
             <div class="container container-2">
                 <div class="section-heading text-center mb-50">
                     <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px;">Project Visuals</h4>
@@ -540,10 +534,46 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+         <div class="gallary-section overflow-hidden">
+            <div class="gallary-text"><span>gallery</span></div>
+            <div class="gallary-wrap wrap-1">
+                <div class="gallery-scroll-wrap">
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-6.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-6.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-7.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-7.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-8.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-8.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-9.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-9.png" alt="img"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallary-wrap gallery-scroll-direction-ltr">
+                <div class="gallery-scroll-wrap align-items-start">
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-10.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-10.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-11.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-11.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-12.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-12.png" alt="img"></a>
+                    </div>
+                    <div class="gallary-scroll-item">
+                        <a href="assets/img/project/project-img-13.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-13.png" alt="img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA -->
-        <section class="invest-cta">
+        <!-- <section class="invest-cta">
             <div class="container container-2">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-7">
@@ -559,7 +589,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Footer -->
         <footer class="footer-section overflow-hidden">
