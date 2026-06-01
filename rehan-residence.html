@@ -127,6 +127,167 @@
                 mask-repeat: no-repeat;
             }
         </style>
+          <style>
+            .invest-stat-box {
+                background: #1C1C1D;
+                border: 1px solid rgba(211,155,50,0.25);
+                border-radius: 4px;
+                padding: 40px 30px;
+                text-align: center;
+                height: 100%;
+            }
+            .invest-stat-box .stat-icon { color: var(--tl-color-theme-primary); font-size: 32px; margin-bottom: 14px; }
+            .invest-stat-box .stat-value { font-size: 36px; font-weight: 700; color: var(--tl-color-theme-primary); line-height: 1; margin-bottom: 8px; }
+            .invest-stat-box .stat-label { color: #9F9FA4; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+            .features-dark { background: #111112; padding: 80px 0; }
+            .features-dark .section-label { color: var(--tl-color-theme-primary); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+            .features-dark .section-heading h2 { color: #fff; }
+            .feature-pill {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 14px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+                color: #ccc;
+            }
+            .feature-pill:last-child { border-bottom: none; }
+            .feature-pill i { color: var(--tl-color-theme-primary); font-size: 16px; width: 20px; flex-shrink: 0; }
+
+            .unit-card {
+                background: #1C1C1D;
+                border-top: 3px solid var(--tl-color-theme-primary);
+                padding: 40px 35px;
+                height: 100%;
+            }
+            .unit-card .unit-type { color: var(--tl-color-theme-primary); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+            .unit-card .unit-name { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 20px; }
+            .unit-card .unit-price { color: #fff; }
+            .unit-card .unit-price span { font-size: 42px; font-weight: 800; color: var(--tl-color-theme-primary); }
+
+            .invest-cta { background: var(--tl-color-theme-primary); padding: 70px 0; }
+            .invest-cta h2 { color: #fff; font-weight: 700; }
+            .invest-cta p { color: rgba(255,255,255,0.85); }
+            .invest-cta .contact-item { color: #fff; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+            .invest-cta .contact-item i { font-size: 18px; }
+            .btn-dark-invest { background: #111; color: #fff; padding: 14px 36px; font-weight: 600; border-radius: 2px; display: inline-block; transition: background .3s; }
+            .btn-dark-invest:hover { background: #000; color: #fff; }
+
+            .gallery-grid img { width: 100%; height: 280px; object-fit: cover; }
+            .gallery-grid .tall img { height: 576px; }
+
+            /* ── Hover & transition enhancements ── */
+            .invest-stat-box { transition: transform .35s ease, border-color .35s, box-shadow .35s; cursor: default; }
+            .invest-stat-box:hover { transform: translateY(-10px); border-color: var(--tl-color-theme-primary); box-shadow: 0 24px 50px rgba(211,155,50,.18); }
+            .invest-stat-box .stat-icon i { transition: transform .35s ease; display: inline-block; }
+            .invest-stat-box:hover .stat-icon i { transform: scale(1.25) rotate(-10deg); }
+
+            .unit-card { transition: transform .35s ease, box-shadow .35s; }
+            .unit-card:hover { transform: translateY(-10px); box-shadow: 0 28px 60px rgba(0,0,0,.4); }
+
+            .feature-pill { transition: color .25s, padding-left .3s; cursor: default; }
+            .feature-pill:hover { color: #fff; padding-left: 14px; }
+            .feature-pill i { transition: transform .25s, color .25s; }
+            .feature-pill:hover i { transform: scale(1.3); }
+
+            /* Gallery zoom */
+            .gallery-grid a { display: block; overflow: hidden; }
+            .gallery-grid a img { transition: transform .65s cubic-bezier(.25,.46,.45,.94); }
+            .gallery-grid a:hover img { transform: scale(1.08); }
+
+            /* Page header entrance */
+            .page-header .title { animation: invHeaderReveal .9s cubic-bezier(.25,.46,.45,.94) both; animation-delay: .3s; }
+            .page-header .sub-title { animation: invHeaderReveal .9s cubic-bezier(.25,.46,.45,.94) both; animation-delay: .52s; }
+            @keyframes invHeaderReveal { from { opacity: 0; transform: translateY(35px); } to { opacity: 1; transform: translateY(0); } }
+
+            /* Floating deposit badge */
+            .deposit-badge { animation: floatBadge 3.2s ease-in-out infinite; }
+            @keyframes floatBadge { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+
+            /* Gold shimmer on stat hover */
+            .invest-stat-box:hover .stat-value {
+                background: linear-gradient(90deg, #b8821e, #f0c060, #D39B32, #f0c060, #b8821e);
+                background-size: 300%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                animation: goldShimmer 1.8s ease infinite;
+            }
+            @keyframes goldShimmer { 0%{ background-position:200% center;} 100%{ background-position:-200% center;} }
+
+            /* Smooth section clip */
+            section { overflow: hidden; }
+
+            /* Concave top-left image shape (matches counter-img-2.png) */
+            .project-img-shape {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                -webkit-mask-size: 100% 100%;
+                -webkit-mask-repeat: no-repeat;
+                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M 20,0 L 93,0 Q 100,0 100,7 L 100,93 Q 100,100 93,100 L 7,100 Q 0,100 0,93 L 0,20 Q 0,0 20,0 Z' fill='white'/%3E%3C/svg%3E");
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+
+            /* ── Mobile Responsiveness ── */
+            @media (max-width: 991px) {
+                /* Intro section: stack columns */
+                .heading-space .section-heading { flex: 0 0 100% !important; max-width: 100% !important; }
+                .heading-space .counter-top-img { flex: 0 0 100% !important; max-width: 100% !important; }
+                .heading-space { flex-direction: column; }
+
+                /* Reduce intro image height */
+                .counter-top-img img { height: 320px !important; }
+
+                /* Section title size */
+                .section-title.title-2 { font-size: 34px !important; }
+
+                /* CTA button left-align */
+                .invest-cta .col-lg-5 { text-align: left !important; margin-top: 24px; }
+            }
+
+            @media (max-width: 767px) {
+                /* Heading + hero */
+                .section-title.title-2 { font-size: 28px !important; line-height: 1.2; }
+                .counter-section { padding-top: 60px !important; padding-bottom: 60px !important; }
+                .counter-top-img img { height: 250px !important; }
+
+                /* Sub-heading type label */
+                .section-heading p[style] { font-size: 14px !important; }
+
+                /* Stats */
+                .invest-stat-box { padding: 28px 18px; }
+                .invest-stat-box .stat-value { font-size: 28px; }
+
+                /* Pricing section */
+                .pricing-section { padding-top: 60px !important; padding-bottom: 60px !important; }
+                .pricing-item { padding: 30px 20px; }
+
+                /* Why invest */
+                .why-card { padding: 28px 22px; }
+
+                /* Features dark */
+                .features-dark { padding: 60px 0; }
+                .features-dark h2 { font-size: 28px !important; }
+                .features-dark img { height: 200px !important; }
+
+                /* CTA */
+                .invest-cta { padding: 50px 0; }
+                .invest-cta h2 { font-size: 22px !important; }
+                .invest-cta .col-lg-5 { text-align: left !important; margin-top: 24px; }
+                .btn-dark-invest { display: block; text-align: center; }
+
+                /* Gallery */
+                .gallary-section .gallary-text { font-size: 120px !important; }
+            }
+
+            @media (max-width: 480px) {
+                .section-title.title-2 { font-size: 24px !important; }
+                .counter-top-img img { height: 220px !important; }
+                .invest-stat-box .stat-value { font-size: 24px; }
+                .pricing-item .price { font-size: 28px !important; }
+                .invest-cta h2 { font-size: 20px !important; }
+            }
+        </style>
     </head>
     <body>
 
@@ -490,6 +651,39 @@
             </div>
         </section>
 
+             <!-- Features -->
+        <section class="features-dark">
+            <div class="container container-2">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <p class="section-label">Premium Amenities</p>
+                        <h2 style="color:#fff;font-size:38px;font-weight:800;margin-bottom:20px;">Designed for <span style="color:var(--tl-color-theme-primary);">Exceptional</span> Living</h2>
+                        <p style="color:#9F9FA4;line-height:1.8;margin-bottom:30px;">Every feature at Valmont Crest Residence has been curated to deliver a lifestyle that exceeds expectations — from smart home integration to resort-style amenities.</p>
+                        <img src="assets/img/project/project-2.png" alt="Valmont Crest Features" style="width:100%;height:260px;object-fit:cover;">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-pill"><i class="fa-solid fa-house-chimney"></i> Ante Room</div>
+                                <div class="feature-pill"><i class="fa-solid fa-maximize"></i> Expansive Luxury Layouts</div>
+                                <div class="feature-pill"><i class="fa-solid fa-eye"></i> Premium Panoramic Views</div>
+                                <div class="feature-pill"><i class="fa-solid fa-layer-group"></i> Large Terrace Spaces</div>
+                                <div class="feature-pill"><i class="fa-solid fa-wifi"></i> Smart Home Integration</div>
+                                <div class="feature-pill"><i class="fa-solid fa-couch"></i> Executive Lounge Spaces</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-pill"><i class="fa-solid fa-bed"></i> Luxury Master Suite</div>
+                                <div class="feature-pill"><i class="fa-solid fa-utensils"></i> Premium Kitchen Systems</div>
+                                <div class="feature-pill"><i class="fa-solid fa-film"></i> Private Entertainment Areas</div>
+                                <div class="feature-pill"><i class="fa-solid fa-water-ladder"></i> Swimming Pool</div>
+                                <div class="feature-pill"><i class="fa-solid fa-dumbbell"></i> Gym House</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <!-- <section class="pt-100 pb-100">
             <div class="container container-2">
@@ -535,6 +729,116 @@
                 </div>
             </div>
         </section> -->
+
+          <section class="faq-section pt-130 pb-130">
+            <div class="container container-2">
+                <div class="row section-heading-wrap">  
+                    <div class="shape"><img src="assets/img/shapes/section-heading.png" alt="shape"></div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="section-heading mb-0">
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Popular Queries</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12">
+                        <div class="section-heading section-heading-2 mb-0">
+                            <h2 class="section-title title-2">Quick and clear <span>answers <br>to your key</span> questions</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="faq-content-2">
+                            <div class="faq-accordion fade-wrapper">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <span>01</span> What is 3D design and how it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span>02</span> How interior design is cost?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <span>03</span> How much time I will spend on planning?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <span>04</span> Can I create custom design?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <span>05</span> Will I need planning permission for my project?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingSix">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                <span>06</span> How long does a typical project take?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Our interior design services cover everything you need to create a stunning and functional space. From initial concept development and space planning to selecting color schemes, furniture, and custom designs, we bring your vision to life.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="faq-img-wrap">
+                            <div class="faq-img">
+                                <img src="assets/img/images/faq-img-2.png" alt="faq">
+                            </div>
+                            <h4 class="title">Still looking for <br> answers or need a <br> fun chat?</h4>
+                            <p>Our team will guide you through our design process, project specifications and cost estimate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./ faq-section -->
 
          <div class="gallary-section overflow-hidden">
             <div class="gallary-text"><span>gallery</span></div>

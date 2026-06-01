@@ -85,7 +85,7 @@
                                 <div class="mobile-menu-items">
                                     <ul>
                                         <li class="menu-item-has-children"><a href="about.html">About Us</a><ul><li><a href="team.html">Team</a></li></ul></li>
-                                        <li class="menu-item-has-children"><a href="service-details.html">Services</a><ul><li><a href="service-details.html#property-development">Property Development</a></li><li><a href="service-details.html#civil-engineering">Civil Eng. Contracting</a></li><li><a href="service-details.html#renovation-remodeling">Renovation &amp; Remodeling</a></li><li><a href="service-details.html#joint-venture">Joint Venture Partnership</a></li><li><a href="service-details.html#architectural-design">Architectural Design</a></li></ul></li>
+                                        <li class="menu-item-has-children active"><a href="service-details.html">Services</a><ul><li><a href="#property-development">Property Development</a></li><li><a href="#civil-engineering">Civil Eng. Contracting</a></li><li><a href="#renovation-remodeling">Renovation &amp; Remodeling</a></li><li><a href="#joint-venture">Joint Venture Partnership</a></li><li><a href="#architectural-design">Architectural Design</a></li></ul></li>
                                         <li><a href="portfolio-3.html">Projects</a></li><li class="menu-item-has-children"><a href="#">Investments</a><ul><li><a href="rehan-residence.html">Rehan Residence</a></li><li><a href="valmont-crest.html">Valmont Crest</a></li></ul></li>
 
 
@@ -983,13 +983,33 @@
                     if (window.ScrollTrigger) setTimeout(function () { ScrollTrigger.refresh(); }, 60);
                 }
 
-                // Delegated click — works even if jQuery re-inits the DOM
+                // Delegated click — sidebar list items
                 document.addEventListener('click', function (e) {
                     var li = e.target.closest('.service-category-list ul li');
                     if (!li) return;
                     e.preventDefault();
                     var a = li.querySelector('a');
-                    showService(idFromHref(a ? a.getAttribute('href') : ''));
+                    var id = idFromHref(a ? a.getAttribute('href') : '');
+                    history.pushState(null, '', '#' + id);
+                    showService(id);
+                });
+
+                // Delegated click — nav dropdown links (header & mobile menu)
+                document.addEventListener('click', function (e) {
+                    var a = e.target.closest('a[href^="#"]');
+                    if (!a) return;
+                    var id = idFromHref(a.getAttribute('href'));
+                    if (!id || VALID_IDS.indexOf(id) === -1) return;
+                    // Not inside the sidebar list (already handled above)
+                    if (a.closest('.service-category-list')) return;
+                    e.preventDefault();
+                    history.pushState(null, '', '#' + id);
+                    showService(id);
+                });
+
+                // Handle browser back/forward
+                window.addEventListener('popstate', function () {
+                    showService(idFromHref(window.location.hash) || 'property-development');
                 });
 
                 // Activate correct section on load
