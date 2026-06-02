@@ -491,7 +491,7 @@
         <!-- Key Stats -->
         <section class="pb-80">
             <div class="container container-2">
-                <div class="row g-4">
+                <div class="row g-4 align-items-stretch">
                     <div class="col-lg-3 col-md-6">
                         <div class="invest-stat-box">
                             <div class="stat-icon"><i class="fa-solid fa-tag"></i></div>
@@ -618,10 +618,10 @@
                     <h4 class="sub-heading" style="color:var(--tl-color-theme-primary);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px;">Why Choose Us</h4>
                     <h2 class="title">Why Invest in Rehan Residence</h2>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 align-items-stretch">
                     <div class="col-lg-3 col-md-6">
                         <div class="why-card">
-                            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="why-icon"><i class="fa-solid fa-award"></i></div>
                             <h4>Trusted Developer</h4>
                             <p>UrbanPro Housing has a proven track record of delivering quality developments on time and to specification.</p>
                         </div>
@@ -1025,7 +1025,7 @@
 
                 /* Stat boxes */
                 var statBoxes = gsap.utils.toArray('.invest-stat-box');
-                if (statBoxes.length) anim(statBoxes, { y: 60, opacity: 0 }, 0.14, statBoxes[0].closest('.row'));
+                if (statBoxes.length) anim(statBoxes, { y: 60, opacity: 0 }, 0, statBoxes[0].closest('.row'));
 
                 /* Animated counters */
                 document.querySelectorAll('.stat-value').forEach(function (el) {
@@ -1047,7 +1047,7 @@
 
                 /* Why cards */
                 var why = gsap.utils.toArray('.why-card');
-                if (why.length) anim(why, { y: 55, opacity: 0 }, 0.14, why[0].closest('.row'));
+                if (why.length) anim(why, { y: 55, opacity: 0 }, 0, why[0].closest('.row'));
 
                 /* Gallery */
                 gsap.utils.toArray('.gallery-grid a').forEach(function (a, i) {

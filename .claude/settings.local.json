@@ -34,7 +34,10 @@
       "PowerShell(git -C \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" diff HEAD -- about.html)",
       "PowerShell(head -100)",
       "PowerShell(git -C \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" diff HEAD -- rehan-residence.html)",
-      "PowerShell(Select-String -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" -Pattern \"<section|sub-heading|section-title|col-lg\" | Select-Object -First 80 | ForEach-Object { \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })"
+      "PowerShell(Select-String -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" -Pattern \"<section|sub-heading|section-title|col-lg\" | Select-Object -First 80 | ForEach-Object { \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" -Recurse -Directory)",
+      "Bash(Select-Object -First 30 FullName)",
+      "Bash(find . -type d -not -path '*/\\\\.*')"
     ],
     "additionalDirectories": [
       "c:\\Users\\Admin\\Desktop\\antra",
