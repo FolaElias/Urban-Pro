@@ -7,6 +7,18 @@
 // Slider CSS
 
 .antra-slider{
+    .swiper-slide {
+        opacity: 0 !important;
+        transition: opacity 1.5s ease !important;
+        pointer-events: none;
+        &.swiper-slide-active {
+            opacity: 1 !important;
+            pointer-events: auto;
+        }
+    }
+    .swiper-slide:not(.swiper-slide-active) .bottom-content {
+        display: none;
+    }
     .slider-item{
         position: relative;
         z-index: 1;
@@ -60,6 +72,7 @@
         }
         .section-title{
             font-size: 120px;
+            padding-bottom: 15px;
             @include breakpoint(lg){
                 font-size: 80px;
             }

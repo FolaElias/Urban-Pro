@@ -34,7 +34,8 @@
             init: false,
             speed: 1500,
             loop: true,
-            effect: "fade", // Fixed typo: "verticle" isn't a default Swiper effect, usually "vertical" or "fade"
+            effect: "fade",
+            fadeEffect: { crossFade: true },
             grabCursor: true,
             autoplay: false,
             pagination: {

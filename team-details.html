@@ -266,73 +266,34 @@
                 <div class="row pin-inner">
                     <div class="col-lg-6">
                         <div class="team-details-img pin-box">
-                            <img src="assets/img/team/team-details-img.png" alt="team">
+                            <img id="td-img" src="assets/img/team/team-img-6.png" alt="team">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="team-details-content scroll-content">
-                            <h2 class="name">Ricardo Marlin</h2>
-                            <span class="prof">Co-Founder & CEO</span>
-                            <p class="desc">Mark Jackson was elected to judge the 3-rd edition of Dezeen Awards. Having many years of expertise in the design of residential and public spaces — the founder and chief architect of Antra and author of FAIN will look at the best entries from all over the world.</p>
+                            <h2 class="name" id="td-name"></h2>
+                            <span class="prof" id="td-role"></span>
+                            <p class="desc" id="td-bio"></p>
                             <div class="team-details-contact">
                                 <span>Email address:</span>
-                                <a class="mail" href="mailto:support@example.com">support@example.com</a>
-                                <a class="number" href="tel:+0844560789">+(084) 456-0789</a>
+                                <a class="mail" href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a>
+                                <a class="number" href="tel:+2347014702451">07014702451</a>
                                 <ul class="social-list">
                                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
                                     <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                 </ul>
                             </div>
                             <div class="team-details-info mb-0">
-                                <h3 class="details-title">Professional info</h3>
-                                <p>Our team brings unparalleled creativity and technical proficiency to the world of interior design. We specialize in crafting spaces that are not only aesthetically stunning but also functional and tailored to our clients’ unique lifestyles and needs.</p>
-                                <ul class="team-details-list">
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Quality Assurance and Site Inspections , 3D Rendering and Visualization</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Lighting Design and Ambiance Creation , Estimation and Budgeting</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Space Planning and Layout Optimization Vendor and Contractor Coordination</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Color Theory and Palette Development Energy-Efficient Design</li>
-                                </ul>
-                            </div>
-                            <div class="skill-item-wrap">
-                                <h4 class="details-title">Expertise & skills</h4>
-                                <p>Mark Jackson is a dynamic leader with a comprehensive skill set spanning strategic planning, business development. We specialize in crafting spaces that are not only aesthetically stunning but also functional and tailored to our clients’ unique lifestyles and needs.</p>
-                                <div class="skills-items">
-                                    <div class="skills-item fade-top">
-                                        <h4 class="title">Specialized Design Areas</h4>
-                                        <div class="progress">
-                                            <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 85%; visibility: visible; animation-duration: 2000ms; animation-delay: 0ms; animation-name: slideInLeft;">
-                                                <span>85%</span>
-                                                <div class="dot"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skills-item fade-top">
-                                        <h4 class="title">Styles and Trends</h4>
-                                        <div class="progress">
-                                            <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 95%; visibility: visible; animation-duration: 2000ms; animation-delay: 0ms; animation-name: slideInLeft;">
-                                                <span>95%</span>
-                                                <div class="dot"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skills-item fade-top">
-                                        <h4 class="title">Design Principles</h4>
-                                        <div class="progress">
-                                            <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 65%; visibility: visible; animation-duration: 2000ms; animation-delay: 0ms; animation-name: slideInLeft;">
-                                                <span>65%</span>
-                                                <div class="dot"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3 class="details-title">About This Role</h3>
+                                <ul class="team-details-list" id="td-skills"></ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ./ team-section -->
 
         <footer class="footer-section overflow-hidden">
@@ -431,5 +392,78 @@
         <script src="assets/js/slider.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+        window.addEventListener('load', function() {
+            var members = {
+                banjo: {
+                    name: 'Banjo Sijuade',
+                    role: 'Director of Operations',
+                    img: 'assets/img/team/team-img-6.png',
+                    bio: 'With over 10 years of experience in the real estate development industry, Banjo Sijuade is a seasoned professional who ensures the seamless execution of UrbanPro\'s construction projects. As the Director of Operations, he oversees day-to-day operations, manages project timelines, and ensures that all developments meet the highest standards of quality and efficiency. Banjo\'s strategic approach, vast knowledge in AutoCAD, 3D modeling, Revit, and hands-on leadership have been instrumental in delivering successful projects on time and within budget. He\'s a graduate of the University of Lagos.',
+                    skills: ['Project & Operations Management', 'AutoCAD, 3D Modeling & Revit', 'Quality Assurance & Site Inspections', 'Strategic Planning & Execution']
+                },
+                femi: {
+                    name: 'Engr. Femi Adegun',
+                    role: 'Managing Partner, Dev.',
+                    img: 'assets/img/team/team-img-7.png',
+                    bio: 'Femi Adegun brings 10 years of experience as a Real Estate Developer and Technical Advisor to UrbanPro Housing Investment Ltd. As our Managing Partner, he is responsible for the technical oversight of all projects, ensuring that designs, construction methods, and materials meet industry standards and client expectations. Femi\'s expertise in project planning, risk management, and innovative construction techniques has been pivotal in driving the company\'s reputation for excellence. He is also the CEO of EcoLuxe Living. Femi Adigun is a graduate of Lagos State University with a degree in Engineering.',
+                    skills: ['Technical Oversight & Project Planning', 'Risk Management & Compliance', 'Innovative Construction Techniques', 'Industry Standards & Client Relations']
+                },
+                leke: {
+                    name: 'Engr. Leke Shoda',
+                    role: 'Head Engineer',
+                    img: 'assets/img/team/team-img-8.png',
+                    bio: 'At UrbanPro, Adeleke is responsible for designing innovative and sustainable real estate projects that align with the company\'s vision. His expertise in creating functional, aesthetically pleasing, and environmentally friendly spaces has been key to UrbanPro\'s success in delivering modern and future-ready developments. He is a graduate of Lagos State University with a degree in Electrical and Electronics Engineering.',
+                    skills: ['Sustainable & Innovative Design', 'Electrical & Electronics Engineering', 'Environmentally Friendly Development', 'Future-Ready Infrastructure']
+                },
+                omolola: {
+                    name: 'Omolola Akinfemiwa',
+                    role: 'Head of Sales',
+                    img: 'assets/img/team/team-img-2.png',
+                    bio: 'Omolola Akinfemiwa is a dynamic real estate professional and Head of Sales at UrbanPro Housing Investment Limited, leading client acquisition, investor relations, and strategic property sales across Lagos. She is passionate about helping clients make informed property and investment decisions while delivering excellent customer experiences. Specializing in luxury residential sales and real estate investment advisory, Omolola is known for her professionalism, market expertise, and results-driven approach. She plays a vital role in strengthening UrbanPro Housing\'s reputation as a trusted brand in premium real estate development and investment opportunities within Surulere and beyond.',
+                    skills: ['Client Acquisition & Investor Relations', 'Luxury Residential Sales', 'Real Estate Investment Advisory', 'Strategic Property Marketing']
+                },
+                azeez: {
+                    name: 'Azeez Adekunle',
+                    role: 'Head of Finance',
+                    img: 'assets/img/team/team-img-4.png',
+                    bio: 'Azeez Adekunle is the Head of Finance at UrbanPro Housing Investment Ltd., where he oversees the company\'s financial operations, strategic planning, budgeting, and compliance management. He holds a degree in Banking and Finance from Olabisi Onabanjo University and is a Chartered Accountant certified by Institute of Chartered Accountants of Nigeria (ICAN). With strong expertise in financial management and corporate accountability, Kunle plays a key role in driving sustainable growth and operational excellence within the organization.',
+                    skills: ['Financial Operations & Budgeting', 'Strategic Planning & Compliance', 'Chartered Accountant (ICAN)', 'Corporate Accountability & Growth']
+                },
+                temitope: {
+                    name: 'Temitope Yamenesa',
+                    role: 'HR/Admin Manager',
+                    img: 'assets/img/team/team-img-5.png',
+                    bio: 'Temitope Yamenesa is the backbone of UrbanPro\'s workforce management and administrative functions. With a strong background in human resources, she oversees recruitment, employee relations, and staff development. Temitope ensures that UrbanPro maintains a motivated and skilled team, while also managing the company\'s administrative operations to support smooth business processes.',
+                    skills: ['Recruitment & Talent Management', 'Employee Relations & Development', 'HR Policy & Compliance', 'Administrative Operations']
+                }
+            };
+
+            var key = new URLSearchParams(window.location.search).get('member') || 'banjo';
+            var m = members[key] || members['banjo'];
+
+            var img = document.getElementById('td-img');
+            var name = document.getElementById('td-name');
+            var role = document.getElementById('td-role');
+            var bio = document.getElementById('td-bio');
+            var ul = document.getElementById('td-skills');
+
+            if (img) img.src = m.img;
+            if (name) name.textContent = m.name;
+            if (role) role.textContent = m.role;
+            if (bio) bio.textContent = m.bio;
+
+            if (ul) {
+                ul.innerHTML = '';
+                m.skills.forEach(function(s) {
+                    var li = document.createElement('li');
+                    li.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i> ' + s;
+                    ul.appendChild(li);
+                });
+            }
+
+            document.title = m.name + ' — UrbanPro Housing';
+        });
+        </script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -175,7 +175,25 @@
                 .pricing-item .price { font-size: 28px !important; }
                 .invest-cta h2 { font-size: 20px !important; }
             }
-        </style>
+
+            
+                    /* VenoBox — force controls above all layers */
+            #vbox-overlay {
+                z-index: 999999 !important;
+                position: fixed !important;
+                pointer-events: auto !important;
+            }
+            #vbox-content, #vbox-close, #vbox-next, #vbox-prev, .vbox-num {
+                z-index: 1000000 !important;
+                pointer-events: auto !important;
+                cursor: pointer !important;
+            }
+            .vbox-overlay, .vbox-container, .vbox-content,
+            .vbox-close, .vbox-next, .vbox-prev {
+                z-index: 999999 !important;
+                pointer-events: auto !important;
+            }
+</style>
     </head>
     <body>
 
@@ -425,7 +443,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-img-item">
+                            <div class="bg-img"><img src="assets/img/images/pricing-img-1.png" alt="pricing"></div>
+                            <h3 class="title">Your dreams, <span>our mission, let's</span> make it happen.</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
                         <div class="pricing-item">
                             <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
                             <h3 class="title">3 Bed Apartment + BQ</h3>
@@ -442,7 +466,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="pricing-item">
                             <div class="shape"><img src="assets/img/shapes/pricing-item-shape.png" alt="shape"></div>
                             <h3 class="title">4 Bed Penthouse + BQ</h3>
@@ -651,32 +675,32 @@
             <div class="gallary-wrap wrap-1">
                 <div class="gallery-scroll-wrap">
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-6.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-6.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-6.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-6.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-7.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-7.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-7.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-7.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-8.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-8.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-8.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-8.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-9.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-9.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-9.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-9.png" alt="img"></a>
                     </div>
                 </div>
             </div>
             <div class="gallary-wrap gallery-scroll-direction-ltr">
                 <div class="gallery-scroll-wrap align-items-start">
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-10.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-10.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-10.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-10.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-11.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-11.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-11.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-11.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-12.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-12.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-12.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-12.png" alt="img"></a>
                     </div>
                     <div class="gallary-scroll-item">
-                        <a href="assets/img/project/project-img-13.png" class="venobox" data-gall="gallary1"><img src="assets/img/project/project-img-13.png" alt="img"></a>
+                        <a href="assets/img/project/project-img-13.png" class="venobox" data-gall="page-gallery"><img src="assets/img/project/project-img-13.png" alt="img"></a>
                     </div>
                 </div>
             </div>
@@ -794,6 +818,85 @@
         <script src="assets/js/slider.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <!-- Custom gallery lightbox for this page -->
+        <script>
+        window.addEventListener('load', function () {
+            // Build lightbox DOM
+            var lb = document.createElement('div');
+            lb.id = 'custom-lb';
+            lb.innerHTML = [
+                '<div id="custom-lb-overlay"></div>',
+                '<button id="custom-lb-close">&#10005;</button>',
+                '<button id="custom-lb-prev">&#8592;</button>',
+                '<button id="custom-lb-next">&#8594;</button>',
+                '<div id="custom-lb-counter"></div>',
+                '<div id="custom-lb-wrap"><img id="custom-lb-img" src="" alt=""/></div>'
+            ].join('');
+            document.body.appendChild(lb);
+
+            var style = document.createElement('style');
+            style.textContent = [
+                '#custom-lb{display:none;position:fixed;inset:0;z-index:2147483647;}',
+                '#custom-lb.active{display:block;}',
+                '#custom-lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);}',
+                '#custom-lb-wrap{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90vw;max-height:88vh;z-index:2;}',
+                '#custom-lb-img{max-width:90vw;max-height:88vh;display:block;border-radius:4px;}',
+                '#custom-lb-close{position:fixed;top:20px;right:28px;z-index:3;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5);color:#fff;font-size:22px;width:48px;height:48px;border-radius:50%;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;}',
+                '#custom-lb-close:hover{background:var(--tl-color-theme-primary);border-color:var(--tl-color-theme-primary);}',
+                '#custom-lb-prev,#custom-lb-next{position:fixed;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5);color:#fff;font-size:28px;width:54px;height:54px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}',
+                '#custom-lb-prev{left:20px;}#custom-lb-next{right:20px;}',
+                '#custom-lb-prev:hover,#custom-lb-next:hover{background:var(--tl-color-theme-primary);border-color:var(--tl-color-theme-primary);}',
+                '#custom-lb-counter{position:fixed;top:22px;left:50%;transform:translateX(-50%);z-index:3;color:#fff;font-size:15px;background:rgba(0,0,0,.5);padding:4px 14px;border-radius:20px;}'
+            ].join('');
+            document.head.appendChild(style);
+
+            var imgs = [], cur = 0;
+
+            function open(idx) {
+                cur = idx;
+                document.getElementById('custom-lb-img').src = imgs[cur];
+                document.getElementById('custom-lb-counter').textContent = (cur + 1) + ' / ' + imgs.length;
+                document.getElementById('custom-lb').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                document.getElementById('custom-lb').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            function prev() { cur = (cur - 1 + imgs.length) % imgs.length; open(cur); }
+            function next() { cur = (cur + 1) % imgs.length; open(cur); }
+
+            // Collect all gallery images from the page gallery only
+            document.querySelectorAll('[data-gall="page-gallery"], [data-gall="rehan"]').forEach(function (a) {
+                var href = a.getAttribute('href');
+                if (href) imgs.push(href);
+            });
+
+            // Attach click handlers — intercept venobox links
+            document.querySelectorAll('[data-gall="page-gallery"], [data-gall="rehan"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var href = a.getAttribute('href');
+                    open(imgs.indexOf(href));
+                });
+            });
+
+            document.getElementById('custom-lb-close').addEventListener('click', close);
+            document.getElementById('custom-lb-overlay').addEventListener('click', close);
+            document.getElementById('custom-lb-prev').addEventListener('click', prev);
+            document.getElementById('custom-lb-next').addEventListener('click', next);
+
+            document.addEventListener('keydown', function (e) {
+                if (!document.getElementById('custom-lb').classList.contains('active')) return;
+                if (e.key === 'ArrowRight') next();
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'Escape') close();
+            });
+        });
+        </script>
+
         <script>
         (function () {
             var ease = 'power3.out';
