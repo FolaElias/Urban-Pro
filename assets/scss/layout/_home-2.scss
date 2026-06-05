@@ -442,6 +442,7 @@
             background-clip: text;
             text-fill-color: transparent;
             opacity: 0.9;
+            white-space: nowrap;
             @include breakpoint(lg){
                 font-size: 200px;
             }

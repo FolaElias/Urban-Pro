@@ -519,6 +519,7 @@
             opacity: 0.13;
             line-height: 1;
             margin-bottom: 0;
+            white-space: nowrap;
             @include breakpoint(lg){
                 font-size: 300px;
             }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -84,6 +84,12 @@
             .gallery-grid a { display: block; overflow: hidden; }
             .gallery-grid a img { transition: transform .65s cubic-bezier(.25,.46,.45,.94); }
             .gallery-grid a:hover img { transform: scale(1.08); }
+
+            /* Fix VenoBox controls above sticky header (z-index conflict) */
+            .vbox-close,
+            .vbox-prev,
+            .vbox-next,
+            .vbox-left-corner { z-index: 9999999 !important; }
 
             /* Page header entrance */
             .page-header .title { animation: invHeaderReveal .9s cubic-bezier(.25,.46,.45,.94) both; animation-delay: .3s; }
@@ -176,23 +182,7 @@
                 .invest-cta h2 { font-size: 20px !important; }
             }
 
-            
-                    /* VenoBox — force controls above all layers */
-            #vbox-overlay {
-                z-index: 999999 !important;
-                position: fixed !important;
-                pointer-events: auto !important;
-            }
-            #vbox-content, #vbox-close, #vbox-next, #vbox-prev, .vbox-num {
-                z-index: 1000000 !important;
-                pointer-events: auto !important;
-                cursor: pointer !important;
-            }
-            .vbox-overlay, .vbox-container, .vbox-content,
-            .vbox-close, .vbox-next, .vbox-prev {
-                z-index: 999999 !important;
-                pointer-events: auto !important;
-            }
+
 </style>
     </head>
     <body>
@@ -241,7 +231,7 @@
                                 <span class="icon"><i class="fa-regular fa-phone"></i></span>
                                 <span class="content">
                                     <span class="call-text">Call Us Now</span>
-                                    <span class="call-number">07014702451</span>
+                                    <span class="call-number">0701 470 2451</span>
                                 </span>
                             </a>
                             <div class="header-btn-wrap">
@@ -302,7 +292,7 @@
                 <div class="side-menu-contact">
                     <ul class="side-menu-list">
                         <li>Ogunlana Drive, Surulere, Lagos</li>
-                        <li><a href="tel:+2347014702451">07014702451</a></li>
+                        <li><a href="tel:+2347014702451">0701 470 2451</a></li>
                         <li><a class="mail" href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a></li>
                     </ul>
                 </div>
@@ -325,7 +315,7 @@
                     <div class="side-menu-header"><h3>Contact Us</h3></div>
                     <ul class="side-menu-list">
                         <li><i class="fas fa-map-marker-alt"></i><p>Ogunlana Drive, Surulere, Lagos</p></li>
-                        <li><i class="fas fa-phone"></i><a href="tel:+2347014702451">07014702451</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+2347014702451">0701 470 2451</a></li>
                         <li><i class="fas fa-envelope-open-text"></i><a href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a></li>
                     </ul>
                 </div>
@@ -716,7 +706,7 @@
                         <div class="contact-item"><i class="fa-solid fa-envelope"></i> hello@urbanprohousing.com</div>
                         <div class="contact-item"><i class="fa-solid fa-globe"></i> www.urbanprohousing.com</div>
                         <div class="contact-item"><i class="fab fa-instagram"></i> @urbanpro_housing</div>
-                        <div class="contact-item"><i class="fa-solid fa-phone"></i> 07014702451 &nbsp;|&nbsp; 09077604585</div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i> 0701 470 2451 &nbsp;|&nbsp; 09077604585</div>
                     </div>
                     <div class="col-lg-5 text-lg-end">
                         <a href="contact.html" class="btn-dark-invest" style="font-size:16px;">Register Interest</a>
@@ -746,10 +736,10 @@
                         <div class="footer-widget footer-col-2">
                             <ul class="footer-list">
                                 <li><a href="about.html">About Us</a></li>
-                                <li><a href="service-details.html">Services</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="portfolio-3.html">Projects</a></li>
                                 <li><a href="team.html">Our Team</a></li>
-                                <li><a href="blog-grid.html">Blog</a></li>
+                                <li><a href="blog-standard.html">News &amp; Blog</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
@@ -759,17 +749,18 @@
                             <ul class="footer-list">
                                 <li><a href="valmont-crest.html">Valmont Crest</a></li>
                                 <li><a href="rehan-residence.html">Rehan Residence</a></li>
-                                <li><a href="contact.html">Partners</a></li>
-                                <li><a href="contact.html">Affiliate Program</a></li>
-                                <li><a href="contact.html">Terms &amp; Conditions</a></li>
-                                <li><a href="contact.html">Support Center</a></li>
+                                <li><a href="service-details.html#property-development">Property Development</a></li>
+                                <li><a href="service-details.html#civil-engineering">Civil Eng. Contracting</a></li>
+                                <li><a href="service-details.html#renovation-remodeling">Renovation &amp; Remodeling</a></li>
+                                <li><a href="service-details.html#joint-venture">Joint Venture Partnership</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-address">
-                                <a class="number" href="tel:+2347014702451">07014702451</a>
+                                <a class="number" href="tel:+2347014702451">0701 470 2451</a>
                                 <a class="mail" href="mailto:hello@urbanprohousing.com">hello@urbanprohousing.com</a>
                                 <ul class="social-list">
                                     <li><a href="#">Facebook</a></li>
@@ -819,83 +810,6 @@
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/main.js"></script>
 
-        <!-- Custom gallery lightbox for this page -->
-        <script>
-        window.addEventListener('load', function () {
-            // Build lightbox DOM
-            var lb = document.createElement('div');
-            lb.id = 'custom-lb';
-            lb.innerHTML = [
-                '<div id="custom-lb-overlay"></div>',
-                '<button id="custom-lb-close">&#10005;</button>',
-                '<button id="custom-lb-prev">&#8592;</button>',
-                '<button id="custom-lb-next">&#8594;</button>',
-                '<div id="custom-lb-counter"></div>',
-                '<div id="custom-lb-wrap"><img id="custom-lb-img" src="" alt=""/></div>'
-            ].join('');
-            document.body.appendChild(lb);
-
-            var style = document.createElement('style');
-            style.textContent = [
-                '#custom-lb{display:none;position:fixed;inset:0;z-index:2147483647;}',
-                '#custom-lb.active{display:block;}',
-                '#custom-lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);}',
-                '#custom-lb-wrap{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90vw;max-height:88vh;z-index:2;}',
-                '#custom-lb-img{max-width:90vw;max-height:88vh;display:block;border-radius:4px;}',
-                '#custom-lb-close{position:fixed;top:20px;right:28px;z-index:3;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5);color:#fff;font-size:22px;width:48px;height:48px;border-radius:50%;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;}',
-                '#custom-lb-close:hover{background:var(--tl-color-theme-primary);border-color:var(--tl-color-theme-primary);}',
-                '#custom-lb-prev,#custom-lb-next{position:fixed;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5);color:#fff;font-size:28px;width:54px;height:54px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}',
-                '#custom-lb-prev{left:20px;}#custom-lb-next{right:20px;}',
-                '#custom-lb-prev:hover,#custom-lb-next:hover{background:var(--tl-color-theme-primary);border-color:var(--tl-color-theme-primary);}',
-                '#custom-lb-counter{position:fixed;top:22px;left:50%;transform:translateX(-50%);z-index:3;color:#fff;font-size:15px;background:rgba(0,0,0,.5);padding:4px 14px;border-radius:20px;}'
-            ].join('');
-            document.head.appendChild(style);
-
-            var imgs = [], cur = 0;
-
-            function open(idx) {
-                cur = idx;
-                document.getElementById('custom-lb-img').src = imgs[cur];
-                document.getElementById('custom-lb-counter').textContent = (cur + 1) + ' / ' + imgs.length;
-                document.getElementById('custom-lb').classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-            function close() {
-                document.getElementById('custom-lb').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            function prev() { cur = (cur - 1 + imgs.length) % imgs.length; open(cur); }
-            function next() { cur = (cur + 1) % imgs.length; open(cur); }
-
-            // Collect all gallery images from the page gallery only
-            document.querySelectorAll('[data-gall="page-gallery"], [data-gall="rehan"]').forEach(function (a) {
-                var href = a.getAttribute('href');
-                if (href) imgs.push(href);
-            });
-
-            // Attach click handlers — intercept venobox links
-            document.querySelectorAll('[data-gall="page-gallery"], [data-gall="rehan"]').forEach(function (a) {
-                a.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    var href = a.getAttribute('href');
-                    open(imgs.indexOf(href));
-                });
-            });
-
-            document.getElementById('custom-lb-close').addEventListener('click', close);
-            document.getElementById('custom-lb-overlay').addEventListener('click', close);
-            document.getElementById('custom-lb-prev').addEventListener('click', prev);
-            document.getElementById('custom-lb-next').addEventListener('click', next);
-
-            document.addEventListener('keydown', function (e) {
-                if (!document.getElementById('custom-lb').classList.contains('active')) return;
-                if (e.key === 'ArrowRight') next();
-                if (e.key === 'ArrowLeft') prev();
-                if (e.key === 'Escape') close();
-            });
-        });
-        </script>
 
         <script>
         (function () {
@@ -934,6 +848,22 @@
             } else {
                 initAnimations();
             }
+        // Fix: gallaryScroll() in main.js duplicates gallery HTML for infinite scroll.
+        // Duplicate <a> tags have no VenoBox listener, so clicking them navigates the
+        // browser directly to the image URL instead of opening the lightbox.
+        // Strip href/data-gall from all duplicates so only originals open VenoBox.
+        window.addEventListener('load', function () {
+            document.querySelectorAll('.gallary-wrap .gallery-scroll-wrap').forEach(function (wrap) {
+                var links = Array.from(wrap.querySelectorAll('a'));
+                var half = Math.floor(links.length / 2);
+                links.slice(half).forEach(function (a) {
+                    a.removeAttribute('href');
+                    a.removeAttribute('data-gall');
+                    a.classList.remove('venobox', 'vbox-item');
+                    a.addEventListener('click', function (e) { e.preventDefault(); });
+                });
+            });
+        });
         })();
         </script>
     </body>
