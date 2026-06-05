@@ -1040,6 +1040,7 @@
             color: var(--tl-color-grey-2);
             line-height: 1;
             opacity: 0.18;
+            white-space: nowrap;
             @include breakpoint(sm){
                 font-size: 100px;
             }
