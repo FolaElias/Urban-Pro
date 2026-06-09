@@ -651,21 +651,60 @@
       },
     });
 
-    // Testi Carousel (loop disabled: single-slide markup breaks loop layout and causes horizontal overflow)
-    var swiperTesti = new Swiper(".testi-carousel", {
+    // Testi Carousel - New multi-slide slider
+    var swiperTestiMain = new Swiper(".testi-carousel-main", {
       slidesPerView: 1,
-      spaceBetween: 24,
+      spaceBetween: 0,
       slidesPerGroup: 1,
-      loop: false,
-      watchOverflow: true,
-      autoplay: false,
-      grabcursor: true,
-      speed: 800,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      grabCursor: true,
+      speed: 700,
+      effect: "slide",
+      pagination: {
+        el: ".testi-pagination",
+        clickable: true,
+        bulletClass: "testi-dot",
+        bulletActiveClass: "testi-dot-active",
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
       navigation: {
-        nextEl: ".testi-top-content-wrap .swiper-prev",
-        prevEl: ".testi-top-content-wrap .swiper-next",
+        nextEl: ".testi-btn-next",
+        prevEl: ".testi-btn-prev",
       },
     });
+
+    // Hover styles for testi nav buttons
+    (function () {
+      var prevBtn = document.querySelector(".testi-btn-prev");
+      var nextBtn = document.querySelector(".testi-btn-next");
+      var brand = "#D39B32";
+      if (prevBtn) {
+        prevBtn.addEventListener("mouseenter", function () {
+          this.style.background = brand;
+          this.style.color = "#fff";
+        });
+        prevBtn.addEventListener("mouseleave", function () {
+          this.style.background = "transparent";
+          this.style.color = brand;
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener("mouseenter", function () {
+          this.style.opacity = "0.85";
+        });
+        nextBtn.addEventListener("mouseleave", function () {
+          this.style.opacity = "1";
+        });
+      }
+    })();
+
 
     //Testi Carousel
 

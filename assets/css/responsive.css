@@ -1,0 +1,191 @@
+/* ============================================================
+   UrbanPro Housing — Mobile Responsive Overrides
+   Loaded after main.css on every page
+   ============================================================ */
+
+/* ── 1199px: Small Desktops / Large Tablets ── */
+@media (max-width: 1199px) {
+  .details-title       { font-size: 38px; }
+  .project-details-meta { flex-wrap: wrap; gap: 18px; }
+}
+
+/* ── 991px: Tablets ── */
+@media (max-width: 991px) {
+  /* Section padding */
+  .pt-130 { padding-top:   80px !important; }
+  .pb-130 { padding-bottom: 80px !important; }
+  .pt-100 { padding-top:   60px !important; }
+  .pb-100 { padding-bottom: 60px !important; }
+
+  /* Page-header banner */
+  .page-header .title    { font-size: 36px !important; }
+  .page-header .sub-title{ font-size: 14px !important; }
+
+  /* Project detail page */
+  .details-title   { font-size: 32px !important; }
+  .details-title-2 { font-size: 26px !important; }
+
+  /* Project meta bar — wrap into 2-column grid */
+  .project-details-meta               { flex-wrap: wrap; }
+  .project-details-meta .details-meta { min-width: 45%; }
+
+  /* Project listing grid — 2 columns */
+  .project-item-wrap-2 { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Investment intro split — already handled per-page, reinforce */
+  .heading-space                { flex-wrap: wrap; }
+  .heading-space .section-heading,
+  .heading-space .counter-top-img { flex: 0 0 100% !important; max-width: 100% !important; }
+
+  /* Payment / CTA bands */
+  .payment-band h2 { font-size: 28px !important; }
+  .payment-band p  { font-size: 16px !important; }
+
+  /* FAQ image */
+  .faq-img img { height: 250px; width: 100%; object-fit: cover; }
+}
+
+/* ── 767px: Mobile Phones ── */
+@media (max-width: 767px) {
+  /* ─ Logo sizing ─ */
+  .header-logo img,
+  .footer-logo img,
+  .side-menu-logo img,
+  .side-menu-head img { max-width: 120px !important; }
+
+  /* ─ Section padding ─ */
+  .pt-130 { padding-top:   50px !important; }
+  .pb-130 { padding-bottom: 50px !important; }
+  .pt-100 { padding-top:   40px !important; }
+  .pb-100 { padding-bottom: 40px !important; }
+
+  /* ─ Hero slider ─ */
+  .slider-content-wrap .section-heading .section-title { font-size: 30px !important; }
+
+  /* ─ Page-header banner ─ */
+  .page-header          { padding: 80px 0 60px !important; }
+  .page-header .title   { font-size: 26px !important; }
+  .page-header .sub-title { font-size: 13px !important; }
+
+  /* ─ General section titles ─ */
+  .section-title        { font-size: 26px !important; }
+  .section-title.title-2{ font-size: 26px !important; }
+
+  /* ─ Project detail title row (Back btn + h1) ─ */
+  .project-details-wrap > div[style*="display:flex"] {
+    flex-direction: column !important;
+    align-items:    flex-start !important;
+    gap:            12px !important;
+  }
+
+  /* ─ Project detail titles ─ */
+  .details-title   { font-size: 22px !important; }
+  .details-title-2 { font-size: 20px !important; }
+
+  /* ─ Project meta: full-width stack ─ */
+  .project-details-meta               { flex-direction: column; gap: 10px !important; }
+  .project-details-meta .details-meta { width: 100%; }
+
+  /* ─ Project gallery images ─ */
+  .gallary-inner-item-2 img { height: 200px; width: 100%; object-fit: cover; }
+  .gallary-inner-items      { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* ─ Feature stats row (project detail) ─ */
+  .project-details-items { flex-wrap: wrap; }
+  .project-details-item  { min-width: 45%; margin-bottom: 16px; }
+
+  /* ─ Project listing — single column ─ */
+  .project-item-wrap-2 { grid-template-columns: 1fr !important; }
+
+  /* ─ Investment page gallery ─ */
+  .gallery-grid img      { height: 180px !important; }
+  .gallery-grid .tall img{ height: 260px !important; }
+
+  /* ─ Unit card ─ */
+  .unit-card                    { padding: 28px 20px !important; }
+  .unit-card .unit-name         { font-size: 22px !important; }
+  .unit-card .unit-price span   { font-size: 32px !important; }
+
+  /* ─ Payment band ─ */
+  .payment-band      { padding: 40px 0 !important; }
+  .payment-band h2   { font-size: 22px !important; }
+
+  /* ─ Invest CTA band ─ */
+  .invest-cta         { padding: 50px 0 !important; }
+  .invest-cta h2      { font-size: 22px !important; }
+  .invest-cta .col-lg-5 { text-align: left !important; margin-top: 20px; }
+  .btn-dark-invest    { display: block; text-align: center; }
+
+  /* ─ Stat boxes ─ */
+  .invest-stat-box           { padding: 24px 14px !important; }
+  .invest-stat-box .stat-value{ font-size: 26px !important; }
+
+  /* ─ Why cards ─ */
+  .why-card { padding: 24px 18px !important; }
+
+  /* ─ Features dark section ─ */
+  .features-dark       { padding: 50px 0 !important; }
+  .features-dark h2    { font-size: 24px !important; }
+  .features-dark img   { height: 180px !important; object-fit: cover; }
+
+  /* ─ Register interest button ─ */
+  .tl-primary-btn[style*="padding"] { padding: 12px 24px !important; font-size: 14px !important; }
+
+  /* ─ FAQ section ─ */
+  .faq-img img      { height: 180px; width: 100%; object-fit: cover; }
+  .faq-img-wrap     { margin-top: 30px; }
+
+  /* ─ Footer ─ */
+  .footer-widget          { margin-bottom: 28px; }
+  .footer-col-2.pl-0     { padding-left: 0 !important; }
+
+  /* ─ Service details sidebar ─ */
+  .service-details-cta { margin-top: 30px; }
+
+  /* ─ Contact / form sections ─ */
+  .contact-form-wrap  { padding: 30px 20px !important; }
+}
+
+/* ── 480px: Small / Older Phones ── */
+@media (max-width: 480px) {
+  /* Logo */
+  .header-logo img { max-width: 100px !important; }
+
+  /* Section padding */
+  .pt-130 { padding-top:   36px !important; }
+  .pb-130 { padding-bottom: 36px !important; }
+
+  /* Hero slider */
+  .slider-content-wrap .section-heading .section-title { font-size: 22px !important; }
+
+  /* Page header */
+  .page-header .title   { font-size: 20px !important; }
+
+  /* Project detail */
+  .details-title        { font-size: 18px !important; }
+  .details-title-2      { font-size: 18px !important; }
+
+  /* Feature stat items — full width at 480px */
+  .project-details-item { min-width: 100%; }
+
+  /* Section titles */
+  .section-title        { font-size: 22px !important; }
+
+  /* Stat boxes */
+  .invest-stat-box .stat-value { font-size: 22px !important; }
+
+  /* Unit price */
+  .unit-card .unit-price span { font-size: 26px !important; }
+
+  /* Payment band */
+  .payment-band h2 { font-size: 18px !important; }
+
+  /* CTA */
+  .invest-cta h2   { font-size: 18px !important; }
+
+  /* Back button text */
+  .project-details-wrap > div[style*="display:flex"] a {
+    font-size: 13px !important;
+    padding:   8px 14px !important;
+  }
+}

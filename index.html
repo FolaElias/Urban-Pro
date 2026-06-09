@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="assets/css/animation.css">
         <link rel="stylesheet" href="assets/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
         <style>
             /* Force slider headings to max 2 lines */
             .slider-content-wrap .section-heading .section-title {
@@ -40,6 +41,79 @@
             }
             @media (max-width: 992px) {
                 .slider-content-wrap .section-heading .section-title { font-size: 42px !important; }
+            }
+            @media (max-width: 767px) {
+                .slider-content-wrap .section-heading .section-title { font-size: 30px !important; }
+            }
+            @media (max-width: 480px) {
+                .slider-content-wrap .section-heading .section-title { font-size: 22px !important; }
+            }
+
+            /* ===== Testimonial Slider ===== */
+            /* Pagination dots */
+            .testi-dot {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #e0d0b0;
+                margin: 0 4px;
+                cursor: pointer;
+                transition: all 0.35s ease;
+                vertical-align: middle;
+            }
+            .testi-dot-active {
+                background: #D39B32;
+                width: 26px;
+                border-radius: 4px;
+            }
+            /* Nav row: dots left, arrows right */
+            .testi-nav-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 28px;
+            }
+            .testi-pagination {
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+            .testi-arrows {
+                display: flex;
+                gap: 10px;
+            }
+            /* Arrow buttons */
+            .testi-btn-prev,
+            .testi-btn-next {
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                font-size: 15px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+            .testi-btn-prev {
+                border: 2px solid #D39B32;
+                background: transparent;
+                color: #D39B32;
+            }
+            .testi-btn-next {
+                border: none;
+                background: #D39B32;
+                color: #fff;
+            }
+            .testi-btn-prev:hover {
+                background: #D39B32;
+                color: #fff;
+                transform: scale(1.08);
+            }
+            .testi-btn-next:hover {
+                opacity: 0.85;
+                transform: scale(1.08);
             }
         </style>
     </head>
@@ -467,17 +541,10 @@
         </section>
         <!-- ./ banner-process-area -->
 
-        <div class="video-area-wrap">
-            <div class="video-bg" data-background="assets/img/bg-img/video-bg-3.png"></div>
-            <div class="play-btn">
-                <a
-                    class="video-popup venobox"
-                    data-autoplay="true"
-                    data-vbtype="video"
-                    href="https://youtu.be/JwC-Qx1lJso">
-                    play
-                </a>
-            </div>
+        <div class="video-area-wrap" style="padding:0;overflow:hidden;">
+            <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;z-index:0;">
+                <source src="assets/img/video/insta_video_59480.MP4" type="video/mp4">
+            </video>
         </div>
         <!-- ./ video-section -->
 
@@ -501,14 +568,14 @@
                 <div class="row gy-5 fade-wrapper">
                     <div class="col-lg-3 col-md-6 fade-top">
                         <div class="counter-item">
-                            <h3 class="title"><span class="odometer" data-count="22">0</span><span class="icon">+</span></h3>
+                            <h3 class="title"><span class="odometer" data-count="5">0</span><span class="icon">+</span></h3>
                             <h4 class="sub-title">Years experience</h4>
                             <p>Improving homes with expert <br> craftsmanship for years</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 fade-top">
                         <div class="counter-item">
-                            <h3 class="title"><span class="odometer" data-count="189">0</span><span class="icon">+</span></h3>
+                            <h3 class="title"><span class="odometer" data-count="12">0</span><span class="icon">+</span></h3>
                             <h4 class="sub-title">Projects completed</h4>
                             <p>Improving homes with expert <br> craftsmanship for years</p>
                         </div>
@@ -522,7 +589,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6 fade-top">
                         <div class="counter-item">
-                            <h3 class="title"><span class="odometer" data-count="328">0</span><span class="icon">+</span></h3>
+                            <h3 class="title"><span class="odometer" data-count="72">0</span><span class="icon">+</span></h3>
                             <h4 class="sub-title">Client satisfaction</h4>
                             <p>Improving homes with expert <br> craftsmanship for years</p>
                         </div>
@@ -543,7 +610,7 @@
                 <div class="project-item-wrap-2">
                     <div class="project-item-2 antra-hover-view">
                         <div class="project-thumb">
-                            <a href="portfolio-details.html"><img src="assets/img/custom-logo/project-one_resized.jpg" alt="project"></a>
+                            <a href="project-gbagada-4bed.html"><img src="assets/img/custom-logo/project-one1.jpeg" alt="project"></a>
                             <ul>
                                 <li>Residential</li>
                                 <li>Semi-Detached Duplex</li>
@@ -556,7 +623,7 @@
                     </div>
                     <div class="project-item-2 antra-hover-view">
                         <div class="project-thumb">
-                            <a href="portfolio-details.html"><img src="assets/img/custom-logo/project-two_resized.jpg" alt="project"></a>
+                            <a href="project-ogudu-3bed.html"><img src="assets/img/custom-logo/pr0-2.jpeg" alt="project"></a>
                             <ul>
                                 <li>Residential</li>
                                 <li>Semi-Detached Duplex</li>
@@ -569,7 +636,7 @@
                     </div>
                     <div class="project-item-2 antra-hover-view">
                         <div class="project-thumb">
-                            <a href="portfolio-details.html"><img src="assets/img/custom-logo/project-three_resized.jpg" alt="project"></a>
+                            <a href="project-maryland-4bed.html"><img src="assets/img/custom-logo/pro-3.jpeg" alt="project"></a>
                             <ul>
                                 <li>Residential</li>
                                 <li>Terrace Duplex</li>
@@ -582,7 +649,7 @@
                     </div>
                     <div class="project-item-2 antra-hover-view">
                         <div class="project-thumb">
-                            <a href="portfolio-details.html"><img src="assets/img/custom-logo/project-four_resized.jpg" alt="project"></a>
+                            <a href="project-gbagada-5bed.html"><img src="assets/img/custom-logo/pro-4.jpeg" alt="project"></a>
                             <ul>
                                 <li>Residential</li>
                                 <li>Fully Detached Duplex</li>
@@ -882,22 +949,23 @@
         </section>
         <!-- ./ project-section -->
 
-          <section class="testimonial-section pt-150 fade-wrapper">
+        
+        <section class="testimonial-section pt-150 fade-wrapper" id="testimonials">
             <div class="container container-2">
                 <div class="row section-heading-wrap fade-top">  
                     <div class="shape"><img src="assets/img/shapes/section-heading.png" alt="shape"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="section-heading mb-0">
-                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Our clients say</h4>
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Reviews</h4>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="section-heading section-heading-2 mb-0">
-                            <h2 class="section-title cursor-effect title-2">Here’s What <span>warm words <br> our clients</span> say</h2>
+                            <h2 class="section-title cursor-effect title-2">Here's What <span>Our Clients <br> has to</span> say</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="testi-img slide-anim" data-delay="0.3" data-offset="100" data-direction="left">
                             <img src="assets/img/custom-logo/what.jpeg" alt="testi">
@@ -905,81 +973,124 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="testi-carousel-wrap slide-anim" data-delay="0.3" data-offset="100" data-direction="right">
-                            <div class="testi-top-content">
-                                <div class="left-content">
-                                    <h3 class="rating">4.80</h3>
-                                    <div class="rating-list">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span>2,688 reviews</span>
-                                    </div>
-                                </div>
-                                <div class="right-content">
-                                    <p>From concept to reality, the team turned my <br> vision into a stunning, livable space. I couldn’t <br> be happier with this!</p>
-                                </div>
-                            </div>
-                            <div class="testi-carousel swiper">
+
+                            <!-- Slider -->
+                            <div class="testi-carousel-main swiper">
                                 <div class="swiper-wrapper">
+
                                     <div class="swiper-slide">
                                         <div class="testi-item">
-                                            <p>“A wonderful experience! They knew what they were doing and were incredibly knowledgeable throughout the process."</p>
+                                            <p>"A wonderful experience from start to finish! The UrbanPro team knew exactly what they were doing and were incredibly knowledgeable throughout the entire process. I am beyond satisfied with my new home."</p>
                                             <div class="testi-author">
-                                                <div class="author-img">
-                                                    <img src="assets/img/testi/testi-author-1.png" alt="author">
-                                                </div>
+                                                
                                                 <h4 class="name">Morgan Dufresne <span>Company Owner</span></h4>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <p>"UrbanPro Housing delivered our Gbagada property ahead of schedule and exceeded every expectation. The build quality is exceptional — the finishing details are truly top-class. I would recommend them to anyone looking for quality."</p>
+                                            <div class="testi-author">
+                                                
+                                                <h4 class="name">Adaeze Bright <span>Property Investor</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <p>"I purchased a 4-bedroom in Maryland and the professionalism of the UrbanPro team was outstanding. Clear communication, honest timelines, and a final product that speaks for itself. My family couldn't be happier!"</p>
+                                            <div class="testi-author">
+                                                
+                                                <h4 class="name">Emeka Okonkwo <span>Civil Servant</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <p>"Working with UrbanPro was the best investment decision I made this year. The Ogudu semi-detached is well-designed, spacious, and the construction quality is world-class. I highly recommend them without reservation."</p>
+                                            <div class="testi-author">
+                                                
+                                                <h4 class="name">Fatima Abdullahi <span>Business Executive</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <p>"I've worked with several developers in Lagos, but none compare to UrbanPro's level of commitment and integrity. The transparency in pricing and the attention to quality are things you don't find easily. Absolutely superb team!"</p>
+                                            <div class="testi-author">
+                                                
+                                                <h4 class="name">Oluwaseun Kehinde <span>Real Estate Agent</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <p>"From the first site visit to handing over of keys, every step was professional and smooth. UrbanPro's Gbagada 5-bedroom property is a masterpiece. The architecture is stunning and the interiors are absolutely gorgeous."</p>
+                                            <div class="testi-author">
+                                                
+                                                <h4 class="name">Chioma Ifeanyi <span>Medical Professional</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!-- /.swiper-wrapper -->
+                            </div><!-- /.testi-carousel-main -->
+
+                            <!-- Navigation & Pagination -->
+                            <div class="testi-nav-row">
+                                <div class="testi-pagination"></div>
+                                <div class="testi-arrows">
+                                    <button class="testi-btn-prev" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <button class="testi-btn-next" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+                        </div><!-- /.testi-carousel-wrap -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
         </section>
-        <!-- ./ testimonial-section -->
 
          <section class="sponsor-section sponsor-1 bg-grey pt-120 pb-130 overflow-hidden">
             <div class="container">
                 <div class="sponsor-text-wrap">
-                    <h5 class="sponsor-text">Our Website <span>75000</span>+ VIP Customer</h5>
+                    <h5 class="sponsor-text">Members & <span>Partners</span></h5>
                 </div>
                 <div class="sponsor-carousel swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-1.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par1.png" alt="sponsor"></a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-2.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par2.png" alt="sponsor"></a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-3.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par3.png" alt="sponsor"></a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-4.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par4.png" alt="sponsor"></a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-5.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par5.png" alt="sponsor"></a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="sponsor-item">
-                                <a href="#"><img src="assets/img/sponsor/sponsor-6.png" alt="sponsor"></a>
+                                <a href="#"><img src="assets/img/sponsor/par6.png" alt="sponsor"></a>
                             </div>
                         </div>
                     </div>
@@ -1072,9 +1183,7 @@
                                     <div class="content">
                                         <p>“I absolutely love my the new modern living room! The clean lines, a neutral tones, and minimalist interior create such a calming & stylish atmosphere. Highly recommend their modern interior design services!"</p>
                                         <div class="testi-author">
-                                            <div class="author-img">
-                                                <img src="assets/img/testi/testi-author-1.png" alt="testi">
-                                            </div>
+                                            
                                             <div class="author-content">
                                                 <h4 class="name">Morgan Dufresne</h4>
                                                 <span>Company owner</span>

@@ -37,7 +37,9 @@
       "PowerShell(Select-String -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\\\\index-2.html\" -Pattern \"<section|sub-heading|section-title|col-lg\" | Select-Object -First 80 | ForEach-Object { \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
       "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Admin\\\\Desktop\\\\antra\" -Recurse -Directory)",
       "Bash(Select-Object -First 30 FullName)",
-      "Bash(find . -type d -not -path '*/\\\\.*')"
+      "Bash(find . -type d -not -path '*/\\\\.*')",
+      "Bash(grep -n \"DOMContentLoaded\\\\|window.onload\\\\|jQuery\\\\|\\\\$\\(document\\\\|swiper\" \"c:/Users/Admin/Desktop/antra/assets/js/main.js\")",
+      "Bash(python -c ' *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Admin\\Desktop\\antra",
